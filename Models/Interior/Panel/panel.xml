@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+<!--  <path>panel.ac</path>-->
+
+
+    <model>
+        <path>Instruments/zkv1000/pfd.xml</path>
+        <offsets><z-m>0.175</z-m>
+            <y-m>-0.30</y-m>
+            <x-m>-0.02</x-m></offsets>
+    </model>
+   <!-- <model>
+        <path>Instruments/pfd/pfd.xml</path>
+        <offsets><z-m>0.175</z-m>
+            <y-m>-0.54</y-m>
+            <x-m>-0.02</x-m></offsets>
+        </model>-->
+ 
+  <model>
+        <path>Instruments/zkv1000/pfd.xml</path>
+        <offsets><z-m>0.175</z-m>
+            <y-m>0.30</y-m>
+        <x-m>-0.02</x-m></offsets>
+    </model>
+        <model>
+        <path>Instruments/zkv1000/mfd.xml</path>
+        <offsets><z-m>0.175</z-m>
+            <y-m>0.00</y-m>
+            <x-m>-0.02</x-m></offsets>
+        
+    </model>
+    <!--Yokes-->
+       <model>
+        <path>Instruments/yoke/yoke.xml</path>
+        <offsets><z-m>0.02</z-m>
+            <y-m>0.40</y-m>
+        <x-m>0.08</x-m></offsets>
+    </model>
+           <model>
+        <path>Instruments/yoke/yoke.xml</path>
+        <offsets><z-m>0.02</z-m>
+            <y-m>-0.40</y-m>
+        <x-m>0.08</x-m></offsets>
+    </model>
+               <model>
+        <path>Instruments/gear/gear.xml</path>
+        <offsets><z-m>0.01</z-m>
+            <y-m>-0.17</y-m>
+        <x-m>0.015</x-m>
+        <pitch-deg>-35</pitch-deg></offsets>
+    </model>
+</PropertyList>

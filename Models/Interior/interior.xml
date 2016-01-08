@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <!-- Planche de bord -->
+  <model>
+    <path>Aircraft/EV55/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -5.09 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -1.23647 </z-m>
+    </offsets>
+  </model>
+
+  
+</PropertyList>

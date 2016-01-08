@@ -1,0 +1,33 @@
+English
+
+[English]
+----------
+
+A little history
+================
+
+Evektor EV-55
+==============
+
+Manufacturer                  : Evektor Aircraft
+Type                          : Regional Propeller Aircraft
+Year                          : 2015?
+Powerplant                    : 
+Wingspan                      : 
+Length                        : 
+Height                        : 
+weight max                    : 
+Cruise speed                  : 
+Range                         : 
+Crew                          :  
+
+Some useful keys:
+=================
+
+Thanks
+======
+helijah/BARANGER Emmanuel: Aircraft is based on his DO-228 (FDM, some files and the complete folder structure)
+Didier1963: He told me how to model :)
+===============
+Made by D-ECHO
+
