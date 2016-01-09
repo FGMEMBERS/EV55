@@ -98,7 +98,7 @@
                  power cruise      : 580 hp
                  weight            :    270 lb 
   -->
-  <propeller x="2.33095" y="2.52204" z="-0.01975"
+  <propeller x="2.27933" y="2.26341" z="-0.45048"
              mass="270" 
              moment="250" 
              radius="1.3625" 
@@ -108,7 +108,7 @@
              cruise-alt="5000" 
              min-rpm="220" 
              max-rpm="1800"> 
-             <actionpt x="3.06092" y="2.52204" z="-0.01975"/>
+             <actionpt x="3.60091" y="2.23847" z="-0.44762"/>
              <turbine-engine eng-power="580" 
                              eng-rpm="2700" 
                              alt="28000" 
@@ -128,7 +128,7 @@
              </turbine-engine>
   </propeller>
 
-  <propeller x="2.33095" y="-2.52204" z="-0.01975"
+  <propeller x="2.27933" y="-2.26341" z="-0.45048"
              mass="270" 
              moment="250" 
              radius="1.3625" 
@@ -138,7 +138,7 @@
              cruise-alt="5000" 
              min-rpm="220" 
              max-rpm="1800"> 
-             <actionpt x="3.06092" y="-2.52204" z="-0.01975"/>
+             <actionpt x="3.60091" y="-2.23847" z="-0.44762"/>
              <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE"/>
              <turbine-engine eng-power="580" 
                              eng-rpm="2700" 
@@ -160,7 +160,7 @@
   </propeller>
 
   <!-- Roue du nez -->
-  <gear x="6.80360" y="0" z="-2.43484" 
+  <gear x="5.04981" y="0" z="-2.53203" 
         compression="0.1" 
         retract-time="7" 
         on-water="0" 
@@ -177,7 +177,7 @@
   </gear>
 
   <!-- Roue gauche -->
-  <gear x="0.59273" y="1.67379" z="-2.42968" 
+  <gear x="1.30448" y="1.30612" z="-2.59839" 
         compression="0.2" 
         retract-time="7"
         on-water="0" 
@@ -194,7 +194,7 @@
   </gear>
 
   <!-- Roue droite -->
-  <gear x="0.59273" y="-1.67379" z="-2.42968" 
+  <gear x="1.30448" y="-1.30612" z="-2.59839" 
         compression="0.2" 
         retract-time="7" 
         on-water="0" 
@@ -209,11 +209,15 @@
 
         <control-speed control="EXTEND" transition-time="6"/>
   </gear>
+ <weight x="4.25947" y="0" z="-1.09557" mass-prop="/sim/weight[0]/weight-lb"/> <!-- Crew -->
+<weight x="2.76032" y="0" z="-1.04504" mass-prop="/sim/weight[1]/weight-lb"/> <!-- Passengers 1-2 -->
+<weight x="0.59065" y="0" z="-0.90943" mass-prop="/sim/weight[2]/weight-lb"/> <!-- Passengers 3-4(5)-->
+<weight x="5.79546" y="0" z="-1.33588" mass-prop="/sim/weight[3]/weight-lb"/> <!-- Baggage-->
 
-  <tank x="1.03" y=" 2.5" z="0.57" capacity="1472"/>
-  <tank x="1.03" y="-2.5" z="0.57" capacity="1472"/>
+  <tank x="1.3" y=" 2.5" z="0.57" capacity="1472"/>
+  <tank x="1.3" y="-2.5" z="0.57" capacity="1472"/>
 
   <!-- Mass displacment -->
-  <ballast x="8" y="0" z="-2" mass="800"/>
+  <ballast x="8" y="0" z="-2" mass="1200"/>
 
 </airplane>

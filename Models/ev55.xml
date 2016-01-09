@@ -13,10 +13,12 @@
       var float_3 = self.getNode("sim/multiplay/generic/float[3]", 1);
       var float_4 = self.getNode("sim/multiplay/generic/float[4]", 1);
       var float_5 = self.getNode("sim/multiplay/generic/float[5]", 1);
+      var float_5 = self.getNode("sim/multiplay/generic/float[6]", 1);
       
       var crewL_door = self.getNode("sim/model/door-positions/crewL/position-norm", 1);
       var crewR_door = self.getNode("sim/model/door-positions/crewR/position-norm", 1);
       var passenger_door = self.getNode("sim/model/door-positions/passenger/position-norm", 1);
+      var passengerD_door = self.getNode("sim/model/door-positions/passengerD/position-norm", 1);
       var cargo_door = self.getNode("sim/model/door-positions/cargo/position-norm", 1);
       var baggageL_door = self.getNode("sim/model/door-positions/baggageL/position-norm", 1);
       var baggageR_door = self.getNode("sim/model/door-positions/baggageR/position-norm", 1);
@@ -24,9 +26,10 @@
       crewL_door.alias(float_0);
       crewR_door.alias(float_1);
       passenger_door.alias(float_2);
-      cargo_door.alias(float_3);
-      baggageL_door.alias(float_4);
-      baggageR_door.alias(float_5);
+      passengerD_door.alias(float_3);
+      cargo_door.alias(float_4);
+      baggageL_door.alias(float_5);
+      baggageR_door.alias(float_6);
     </load>
 
     <unload>
@@ -34,6 +37,7 @@
       crewL_door.unalias();
       crewR_door.unalias();
       passenger_door.unalias();
+      passengerD_door.unalias();
       cargo_door.unalias();
       baggageL_door.unalias();
       baggageR_door.unalias();
@@ -249,6 +253,50 @@
       <x2-m>0.67515 </x2-m>
       <y2-m> -0.54654 </y2-m>
       <z2-m> -0.37987</z2-m>
+    </axis>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>doorR1D</object-name>
+    <object-name>doorR1Dint</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>  
+      <binding>
+        <command>nasal</command>
+        <script>doors.passengerD.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>doorR1D</object-name>
+    <object-name>doorR1Dint</object-name>
+    <property>sim/model/door-positions/passengerD/position-norm</property>
+    <factor> 120 </factor>
+    <axis>
+      <x1-m>0.00587 </x1-m>
+      <y1-m>-0.55995</y1-m>
+      <z1-m>-1.72308</z1-m>
+      <x2-m>0.66803 </x2-m>
+      <y2-m> -0.55012 </y2-m>
+      <z2-m> -1.73262</z2-m>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>steps</object-name>
+    <property>sim/model/door-positions/passengerD/position-norm</property>
+<offset-deg>-120</offset-deg>
+    <factor> 120 </factor>
+    <axis>
+      <x1-m>0.00587 </x1-m>
+      <y1-m>-0.55995</y1-m>
+      <z1-m>-1.72308</z1-m>
+      <x2-m>0.66803 </x2-m>
+      <y2-m> -0.55012 </y2-m>
+      <z2-m> -1.73262</z2-m>
     </axis>
   </animation>
   <animation>
