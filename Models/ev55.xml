@@ -41,7 +41,7 @@
   </nasal>
   <path>ev55.ac</path>
      <effect>
-    <inherits-from>Aircraft/Citation/Models/Effects/citation_reflect</inherits-from>
+    <inherits-from>Effects/reflect</inherits-from>
     <object-name>body</object-name>
     <object-name>vstab</object-name>
     <object-name>hstab</object-name>   
@@ -385,7 +385,7 @@
 </center>
     <axis><y>1</y>
     </axis>
-  </animation>-->
+  </animation>
     <!-- Animations des ailerons -->
  <animation>
     <type>rotate</type>
