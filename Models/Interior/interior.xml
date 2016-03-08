@@ -13,6 +13,68 @@
       <z-m> -1.23647 </z-m>
     </offsets>
   </model>
+<!--Mixture and Throttle-->
+<!--Throttle-->
+    <animation>
+        <type>rotate</type>
+        <object-name>throttleL</object-name>
+        <property>/controls/engines/engine[0]/throttle</property>
+        <factor>-50</factor>
+        <center>
+            <x-m>-4.98636</x-m>
+            <z-m>-1.30441</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>throttleR</object-name>
+        <property>/controls/engines/engine[1]/throttle</property>
+        <factor>-50</factor>
+        <center>
+            <x-m>-4.98636</x-m>
+            <z-m>-1.30441</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+  <!--Mixture-->
 
-  
+    <animation>
+        <type>rotate</type>
+        <object-name>mixtureL</object-name>
+        <property>/controls/engines/engine[0]/mixture</property>
+        <factor>-50</factor>
+        <center>
+            <x-m>-4.98636</x-m>
+            <z-m>-1.30441</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>mixtureR</object-name>
+        <property>/controls/engines/engine[1]/mixture</property>
+        <factor>-50</factor>
+        <center>
+            <x-m>-4.98636</x-m>
+            <z-m>-1.30441</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
 </PropertyList>

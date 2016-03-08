@@ -1,17 +1,9 @@
 <?xml version="1.0" ?> 
   <PropertyList> 
     <path>yoke.ac</path> 
-    <animation>
-        <name>Yoke</name>
-        <object-name>Yoke1</object-name>
-        <object-name>Yoke2</object-name>
-        <object-name>Yoke3</object-name>
-        <object-name>Yoke4</object-name>
-        <object-name>Yoke5</object-name>
-    </animation>
  <animation>
   <type>translate</type>
-  <object-name>Yoke</object-name>
+  <object-name>yoke</object-name>
   <property>controls/flight/elevator</property>
   <factor>-0.04</factor>
   <axis>
@@ -23,7 +15,7 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>Yoke</object-name>
+  <object-name>yoke</object-name>
   <property>controls/flight/aileron</property>
   <factor>-30.0</factor>
   <axis>
@@ -40,7 +32,7 @@
 
  <animation>
    <type>select</type>
-   <object-name>Yoke</object-name>
+  <object-name>yoke</object-name>
    <condition>
      <not>
        <property>sim/model/hide-yoke</property>

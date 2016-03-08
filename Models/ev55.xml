@@ -171,6 +171,8 @@
   <animation>
     <type>pick</type>
     <object-name>doorFL</object-name>
+    <object-name>doorFLwindow</object-name>
+    <object-name>doorFLwindowint</object-name>
     <object-name>doorFLint</object-name>
     <action>
       <button>0</button>
@@ -185,6 +187,8 @@
   <animation>
     <type>rotate</type>
     <object-name>doorFL</object-name>
+    <object-name>doorFLwindow</object-name>
+    <object-name>doorFLwindowint</object-name>
     <object-name>doorFLint</object-name>
     <property>sim/model/door-positions/crewL/position-norm</property>
     <factor> -120 </factor>
@@ -200,6 +204,8 @@
   <animation>
     <type>pick</type>
     <object-name>doorFR</object-name>
+    <object-name>doorFRwindow</object-name>
+    <object-name>doorFRwindowint</object-name>
     <object-name>doorFRint</object-name>
     <action>
       <button>0</button>
@@ -214,6 +220,8 @@
   <animation>
     <type>rotate</type>
     <object-name>doorFR</object-name>
+    <object-name>doorFRwindow</object-name>
+    <object-name>doorFRwindowint</object-name>
     <object-name>doorFRint</object-name>
     <property>sim/model/door-positions/crewR/position-norm</property>
     <factor> 120 </factor>
@@ -319,13 +327,11 @@
     <object-name>doorR2int</object-name>
     <property>sim/model/door-positions/cargo/position-norm</property>
     <factor> -120 </factor>
-    <axis>
-      <x1-m>0.00801 </x1-m>
-      <y1-m>-0.62682</y1-m>
-      <z1-m>-0.38188</z1-m>
-      <x2-m>0.67515 </x2-m>
-      <y2-m> -0.54654 </y2-m>
-      <z2-m> -0.37987</z2-m>
+<center>
+            <x-m>1.23683</x-m>
+            <y-m>-0.83314</y-m>
+        </center>
+    <axis><z>1</z>
     </axis>
   </animation>
  <animation>
