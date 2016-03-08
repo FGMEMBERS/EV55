@@ -3,28 +3,11 @@
 <PropertyList>
 
   <path>engineswitches.ac</path>
+  <!--Battery Switch-->
 
-
-  <animation>
-    <type>rotate</type>
-    <object-name>Handle</object-name>
-    <property>controls/gear/gear-down</property>
-    <factor> 180 </factor>
-    <axis>
-      <x> -1 </x>
-      <y>  0 </y>
-      <z>  0 </z>
-    </axis>
-    <center>
-      <x-m>  0.000 </x-m>
-      <y-m>  0.0 </y-m>
-      <z-m> 0.0 </z-m>
-    </center>
-  </animation>
-  <!--Engine Left Master switch-->
   <animation>
     <type>pick</type>
-    <object-name>engLswitch</object-name>
+    <object-name>batteryswitch</object-name>
     <action>
       <button> 0 </button>
       <repeatable>false</repeatable>
@@ -32,6 +15,29 @@
         <command>property-toggle</command>
         <property>controls/electric/battery-switch</property>
       </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>batteryswitch</object-name>
+        <property>controls/electric/battery-switch</property>
+        <factor>-50</factor>
+        <center>
+            <x-m>-5.11801</x-m>
+            <z-m>-1.18770</z-m>
+        </center>
+        <axis>
+            <y>1</y>
+            </axis>
+  </animation>
+
+  <!--Engine Left Master switch-->
+  <animation>
+    <type>pick</type>
+    <object-name>engLswitch</object-name>
+    <action>
+      <button> 0 </button>
+      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>controls/engines/engine[0]/master-switch</property>
@@ -47,6 +53,12 @@
       <binding>
         <command>property-cycle</command>
         <property>controls/engines/engine[0]/condition</property>
+        <value>1</value>
+        <value>0</value>
+      </binding>
+      <binding>
+        <command>property-cycle</command>
+        <property>controls/engines/engine[0]/propeller-pitch</property>
         <value>1</value>
         <value>0</value>
       </binding>
@@ -87,6 +99,12 @@
       <binding>
         <command>property-cycle</command>
         <property>controls/engines/engine[1]/condition</property>
+        <value>1</value>
+        <value>0</value>
+      </binding>
+      <binding>
+        <command>property-cycle</command>
+        <property>controls/engines/engine[0]/propeller-pitch</property>
         <value>1</value>
         <value>0</value>
       </binding>
