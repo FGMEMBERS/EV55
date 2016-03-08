@@ -137,6 +137,31 @@
   </animation>
 <!--Mixture and Throttle-->
 <!--Throttle-->
+ <animation>
+    <type>slider</type>
+        <object-name>throttleL</object-name>
+    <drag-direction>vertical</drag-direction>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[0]/throttle</property>
+        <factor>0.05</factor>
+        <min>0</min>
+        <max>1</max>
+        <wrap>0</wrap>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <label>Throttle Left: %3d%%</label>
+        <measure-text>Throttle Left: 100%</measure-text>
+        <tooltip-id>throttle</tooltip-id>
+        <mapping>percent</mapping>
+        <property>controls/engines/engine[0]/throttle</property>
+      </binding>
+    </hovered>
+  </animation>
     <animation>
         <type>rotate</type>
         <object-name>throttleL</object-name>
@@ -152,6 +177,31 @@
             <z>0.0</z>
         </axis>
     </animation>
+ <animation>
+    <type>slider</type>
+        <object-name>throttleR</object-name>
+    <drag-direction>vertical</drag-direction>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[1]/throttle</property>
+        <factor>0.05</factor>
+        <min>0</min>
+        <max>1</max>
+        <wrap>0</wrap>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <label>Throttle Right: %3d%%</label>
+        <measure-text>Throttle Right: 100%</measure-text>
+        <tooltip-id>throttle</tooltip-id>
+        <mapping>percent</mapping>
+        <property>controls/engines/engine[1]/throttle</property>
+      </binding>
+    </hovered>
+  </animation>
     <animation>
         <type>rotate</type>
         <object-name>throttleR</object-name>
@@ -168,6 +218,31 @@
         </axis>
     </animation>
   <!--Mixture-->
+ <animation>
+    <type>slider</type>
+        <object-name>mixtureL</object-name>
+    <drag-direction>vertical</drag-direction>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[0]/mixture</property>
+        <factor>0.05</factor>
+        <min>0</min>
+        <max>1</max>
+        <wrap>0</wrap>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <label>Mixture Left: %3d%%</label>
+        <measure-text>Mixture Left: 100%</measure-text>
+        <tooltip-id>throttle</tooltip-id>
+        <mapping>percent</mapping>
+        <property>controls/engines/engine[0]/mixture</property>
+      </binding>
+    </hovered>
+  </animation>
 
     <animation>
         <type>rotate</type>
@@ -184,6 +259,31 @@
             <z>0.0</z>
         </axis>
     </animation>
+ <animation>
+    <type>slider</type>
+        <object-name>mixtureR</object-name>
+    <drag-direction>vertical</drag-direction>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[1]/mixture</property>
+        <factor>0.05</factor>
+        <min>0</min>
+        <max>1</max>
+        <wrap>0</wrap>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <label>Mixture Right: %3d%%</label>
+        <measure-text>Mixture Right: 100%</measure-text>
+        <tooltip-id>throttle</tooltip-id>
+        <mapping>percent</mapping>
+        <property>controls/engines/engine[1]/mixture</property>
+      </binding>
+    </hovered>
+  </animation>
     <animation>
         <type>rotate</type>
         <object-name>mixtureR</object-name>

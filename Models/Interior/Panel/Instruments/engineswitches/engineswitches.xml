@@ -104,7 +104,7 @@
       </binding>
       <binding>
         <command>property-cycle</command>
-        <property>controls/engines/engine[0]/propeller-pitch</property>
+        <property>controls/engines/engine[1]/propeller-pitch</property>
         <value>1</value>
         <value>0</value>
       </binding>
