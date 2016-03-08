@@ -7,8 +7,8 @@
 
     <model>
         <path>Instruments/zkv1000/pfd.xml</path>
-        <offsets><z-m>0.175</z-m>
-            <y-m>-0.30</y-m>
+        <offsets><z-m>0.2</z-m>
+            <y-m>-0.32</y-m>
             <x-m>-0.02</x-m></offsets>
     </model>
    <!-- <model>
@@ -20,13 +20,13 @@
  
   <model>
         <path>Instruments/zkv1000/pfd.xml</path>
-        <offsets><z-m>0.175</z-m>
-            <y-m>0.30</y-m>
+        <offsets><z-m>0.2</z-m>
+            <y-m>0.32</y-m>
         <x-m>-0.02</x-m></offsets>
     </model>
         <model>
         <path>Instruments/zkv1000/mfd.xml</path>
-        <offsets><z-m>0.175</z-m>
+        <offsets><z-m>0.2</z-m>
             <y-m>0.00</y-m>
             <x-m>-0.02</x-m></offsets>
         
@@ -35,20 +35,20 @@
        <model>
         <path>Instruments/yoke/yoke.xml</path>
         <offsets><z-m>0.02</z-m>
-            <y-m>0.40</y-m>
+            <y-m>0.35</y-m>
         <x-m>0.08</x-m></offsets>
     </model>
            <model>
         <path>Instruments/yoke/yoke.xml</path>
         <offsets><z-m>0.02</z-m>
-            <y-m>-0.40</y-m>
+            <y-m>-0.35</y-m>
         <x-m>0.08</x-m></offsets>
     </model>
                <model>
         <path>Instruments/gear/gear.xml</path>
-        <offsets><z-m>0.01</z-m>
-            <y-m>-0.17</y-m>
-        <x-m>0.015</x-m>
-        <pitch-deg>-35</pitch-deg></offsets>
+        <offsets><z-m>0.05</z-m>
+            <y-m>-0.13</y-m>
+        <x-m>0.01</x-m>
+        <pitch-deg>-48</pitch-deg></offsets>
     </model>
 </PropertyList>

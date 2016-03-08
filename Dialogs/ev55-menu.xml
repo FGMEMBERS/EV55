@@ -20,15 +20,6 @@
           <script>aircraft.livery.dialog.toggle()</script>
         </binding>
       </item>
-<!--      
-      <item>
-        <label>Immatriculation</label>
-        <binding>
-          <command>nasal</command>
-          <script>do228.immat_dialog.toggle()</script>
-        </binding>
-      </item>
--->
     </menu>
   </default>
 

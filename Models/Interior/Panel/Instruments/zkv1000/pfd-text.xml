@@ -3,7 +3,7 @@
 <PropertyList>
   
   <name>PFD text display</name>
-  <background>Aircraft/Tecnam-P2010/Models/Interior/Panel/Instruments/zkv1000/transparent-bg.png</background>
+  <background>Aircraft/EV55/Models/Interior/Panel/Instruments/zkv1000/transparent-bg.png</background>
   <w>217</w>
   <h>164</h>
   

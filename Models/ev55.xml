@@ -326,7 +326,7 @@
     <object-name>doorR2</object-name>
     <object-name>doorR2int</object-name>
     <property>sim/model/door-positions/cargo/position-norm</property>
-    <factor> -120 </factor>
+    <factor> 180 </factor>
 <center>
             <x-m>1.23683</x-m>
             <y-m>-0.83314</y-m>
@@ -392,12 +392,44 @@
       <z2-m> -0.85358</z2-m>
     </axis>
   </animation>
+  
+    <animation>
+        <type>select</type>
+        <object-name>propL</object-name>
+        <condition>
+            <less-than><property>engines/engine[0]/rpm</property>
+                <value>500</value>
+                </less-than></condition>
+    </animation>
+        <animation>
+        <type>select</type>
+        <object-name>propblurL</object-name>
+        <condition>
+            <greater-than><property>engines/engine[0]/rpm</property>
+                <value>400</value>
+                </greater-than>
+            <less-than><property>engines/engine[0]/rpm</property>
+                <value>1000</value>
+                </less-than></condition>
+    </animation>
+        <animation>
+        <type>select</type>
+        <object-name>propdiscL</object-name>
+        <condition>
+            <greater-than>
+                <property>engines/engine[0]/rpm</property>
+                <value>1000</value>
+                </greater-than>
+                    </condition>
+    </animation>
     <animation>
         <type>spin</type>
         <object-name>propL</object-name>
+        <object-name>propblurL</object-name>
+        <object-name>propdiscL</object-name>
         <object-name>spinnerL</object-name>
         <property>engines/engine[0]/rpm</property>
-<condition><property>engines/engine[0]/running</property></condition>
+        <condition><greater-than><property>engines/engine[0]/rpm</property><value>5</value></greater-than></condition>
         <factor>10</factor>
         <center>
             <y-m>-2.24041</y-m>
@@ -410,13 +442,43 @@
         </axis>
     </animation>
  
- 
+     <animation>
+        <type>select</type>
+        <object-name>propR</object-name>
+        <condition>
+            <less-than><property>engines/engine[1]/rpm</property>
+                <value>500</value>
+                </less-than></condition>
+    </animation>
+        <animation>
+        <type>select</type>
+        <object-name>propblurR</object-name>
+        <condition>
+            <greater-than><property>engines/engine[1]/rpm</property>
+                <value>400</value>
+                </greater-than>
+            <less-than><property>engines/engine[1]/rpm</property>
+                <value>1000</value>
+                </less-than></condition>
+    </animation>
+        <animation>
+        <type>select</type>
+        <object-name>propdiscR</object-name>
+        <condition>
+            <greater-than>
+                <property>engines/engine[1]/rpm</property>
+                <value>1000</value>
+                </greater-than>
+                    </condition>
+    </animation>
     <animation>
         <type>spin</type>
         <object-name>propR</object-name>
+        <object-name>propblurR</object-name>
+        <object-name>propdiscR</object-name>
         <object-name>spinnerR</object-name>
         <property>engines/engine[1]/rpm</property>
-<condition><property>engines/engine[1]/running</property></condition>
+        <condition><greater-than><property>engines/engine[1]/rpm</property><value>5</value></greater-than></condition>
         <factor>10</factor>
         <center>
             <y-m>2.24041</y-m>

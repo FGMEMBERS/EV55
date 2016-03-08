@@ -13,16 +13,138 @@
       <z-m> -1.23647 </z-m>
     </offsets>
   </model>
+  <!--PANEL-->
+  <!--Engine switches-->
+  <model>
+    <path>Aircraft/EV55/Models/Interior/Panel/Instruments/engineswitches/engineswitches.xml</path>
+  </model>  
+  <!--Gear Indicator-->
+  <!--Illuminate "UP" Indicators-->
+   <animation>
+    <type>material</type>
+    <object-name>gearFup</object-name>
+    <condition><less-than>
+            <property>/gear/gear/position-norm</property>
+            <value>1</value>
+        </less-than>
+    </condition>
+    <ambient>
+        <red>1</red>
+        <green>0</green>
+        <blue>0</blue>
+    </ambient>
+    <emission>
+        <red>1</red>
+        <green>0</green>
+        <blue>0</blue>
+    </emission>
+  </animation>
+   <animation>
+    <type>material</type>
+    <object-name>gearLup</object-name>
+    <condition><less-than>
+            <property>/gear/gear[1]/position-norm</property>
+            <value>1</value>
+        </less-than>
+    </condition>
+    <ambient>
+        <red>1</red>
+        <green>0</green>
+        <blue>0</blue>
+    </ambient>
+    <emission>
+        <red>1</red>
+        <green>0</green>
+        <blue>0</blue>
+    </emission>
+  </animation>
+   <animation>
+    <type>material</type>
+    <object-name>gearRup</object-name>
+    <condition><less-than>
+            <property>/gear/gear[2]/position-norm</property>
+            <value>1</value>
+        </less-than>
+    </condition>
+    <ambient>
+        <red>1</red>
+        <green>0</green>
+        <blue>0</blue>
+    </ambient>
+    <emission>
+        <red>1</red>
+        <green>0</green>
+        <blue>0</blue>
+    </emission>
+  </animation>
+  <!--Illuminate "DOWN" Indicators-->
+   <animation>
+    <type>material</type>
+    <object-name>gearFdown</object-name>
+    <condition><equals>
+            <property>/gear/gear/position-norm</property>
+            <value>1</value>
+        </equals>
+    </condition>
+    <ambient>
+        <red>0</red>
+        <green>1</green>
+        <blue>0</blue>
+    </ambient>
+    <emission>
+        <red>0</red>
+        <green>1</green>
+        <blue>0</blue>
+    </emission>
+  </animation>
+   <animation>
+    <type>material</type>
+    <object-name>gearLdown</object-name>
+    <condition><equals>
+            <property>/gear/gear[1]/position-norm</property>
+            <value>1</value>
+        </equals>
+    </condition>
+    <ambient>
+        <red>0</red>
+        <green>1</green>
+        <blue>0</blue>
+    </ambient>
+    <emission>
+        <red>0</red>
+        <green>1</green>
+        <blue>0</blue>
+    </emission>
+  </animation>
+   <animation>
+    <type>material</type>
+    <object-name>gearRdown</object-name>
+    <condition><equals>
+            <property>/gear/gear[2]/position-norm</property>
+            <value>1</value>
+        </equals>
+    </condition>
+    <ambient>
+        <red>0</red>
+        <green>1</green>
+        <blue>0</blue>
+    </ambient>
+    <emission>
+        <red>0</red>
+        <green>1</green>
+        <blue>0</blue>
+    </emission>
+  </animation>
 <!--Mixture and Throttle-->
 <!--Throttle-->
     <animation>
         <type>rotate</type>
         <object-name>throttleL</object-name>
         <property>/controls/engines/engine[0]/throttle</property>
-        <factor>-50</factor>
+        <factor>-70</factor>
         <center>
-            <x-m>-4.98636</x-m>
-            <z-m>-1.30441</z-m>
+            <x-m>-4.957</x-m>
+            <z-m>-1.3269</z-m>
         </center>
         <axis>
             <x>0</x>
@@ -34,10 +156,10 @@
         <type>rotate</type>
         <object-name>throttleR</object-name>
         <property>/controls/engines/engine[1]/throttle</property>
-        <factor>-50</factor>
+        <factor>-70</factor>
         <center>
-            <x-m>-4.98636</x-m>
-            <z-m>-1.30441</z-m>
+            <x-m>-4.957</x-m>
+            <z-m>-1.3269</z-m>
         </center>
         <axis>
             <x>0</x>
@@ -51,10 +173,10 @@
         <type>rotate</type>
         <object-name>mixtureL</object-name>
         <property>/controls/engines/engine[0]/mixture</property>
-        <factor>-50</factor>
+        <factor>-70</factor>
         <center>
-            <x-m>-4.98636</x-m>
-            <z-m>-1.30441</z-m>
+            <x-m>-4.957</x-m>
+            <z-m>-1.3269</z-m>
         </center>
         <axis>
             <x>0</x>
@@ -66,10 +188,10 @@
         <type>rotate</type>
         <object-name>mixtureR</object-name>
         <property>/controls/engines/engine[1]/mixture</property>
-        <factor>-50</factor>
+        <factor>-70</factor>
         <center>
-            <x-m>-4.98636</x-m>
-            <z-m>-1.30441</z-m>
+            <x-m>-4.957</x-m>
+            <z-m>-1.3269</z-m>
         </center>
         <axis>
             <x>0</x>

@@ -1384,7 +1384,7 @@
   </animation>
   
   <panel>
-    <path>Aircraft/Tecnam-P2010/Models/Interior/Panel/Instruments/zkv1000/mfd-text.xml</path>
+    <path>Aircraft/EV55/Models/Interior/Panel/Instruments/zkv1000/mfd-text.xml</path>
     <bottom-left>
       <x-m>  0.007 </x-m>
       <y-m> -0.108 </y-m>

@@ -7,12 +7,12 @@
     
     <description>Evektor EV55 (YASim)</description>
     <author>D-ECHO (3D/FDM)</author>
-    
+    <status>beta</status>
     <rating>
-      <FDM type="int">     1 </FDM>
+        <FDM type="int">     2 </FDM> <!--No PoH available, almost no test data available-->
       <systems type="int"> 1 </systems>
-      <cockpit type="int"> 1 </cockpit>
-      <model type="int">   1 </model>
+      <cockpit type="int"> 3 </cockpit>
+      <model type="int">   3 </model>
     </rating>
    <weight n="0">
         <name>Crew</name>

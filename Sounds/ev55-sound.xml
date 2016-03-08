@@ -7,7 +7,7 @@
     <!-- Moteur 1 -->
     <crank>
       <name>engstart</name>
-      <path>Aircraft/DO-228/Sounds/starter.wav</path>
+      <path>Aircraft/EV55/Sounds/starter.wav</path>
       <property>/engines/engine[0]/cranking</property>
       <volume>
         <offset>-0.4</offset>
@@ -19,7 +19,7 @@
     <crank>
       <name>crank</name>
       <mode>looped</mode>
-      <path>Aircraft/DO-228/Sounds/starter.wav</path>
+      <path>Aircraft/EV55/Sounds/starter.wav</path>
       <condition>
         <property>/engines/engine[0]/cranking</property>
         <not>
@@ -39,7 +39,7 @@
 
     <crank>
       <name>cough</name>
-      <path>Aircraft/DO-228/Sounds/starter.wav</path>
+      <path>Aircraft/EV55/Sounds/starter.wav</path>
       <property>/engines/engine[0]/running</property>
       <volume>
         <offset>-0.50</offset>
@@ -55,7 +55,7 @@
     <engine>
        <name>engine</name>
       <mode>looped</mode>
-      <path>Aircraft/DO-228/Sounds/running.wav</path>
+      <path>Aircraft/EV55/Sounds/running.wav</path>
       <condition>
         <property>/engines/engine[0]/running</property>
         <less-than>
@@ -83,7 +83,7 @@
     <engine>
       <name>enginerun</name>
       <mode>looped</mode>
-      <path>Aircraft/DO-228/Sounds/running.wav</path>
+      <path>Aircraft/EV55/Sounds/running.wav</path>
       <condition>
         <property>/engines/engine[0]/running</property>
         <greater-than>
@@ -111,7 +111,7 @@
     <!-- Moteur 2 -->
     <crank>
       <name>engstart</name>
-      <path>Aircraft/DO-228/Sounds/starter.wav</path>
+      <path>Aircraft/EV55/Sounds/starter.wav</path>
       <property>/engines/engine[1]/cranking</property>
       <volume>
         <offset>-0.4</offset>
@@ -123,7 +123,7 @@
     <crank>
       <name>crank</name>
       <mode>looped</mode>
-      <path>Aircraft/DO-228/Sounds/starter.wav</path>
+      <path>Aircraft/EV55/Sounds/starter.wav</path>
       <condition>
         <property>/engines/engine[1]/cranking</property>
         <not>
@@ -143,7 +143,7 @@
 
     <crank>
       <name>cough</name>
-      <path>Aircraft/DO-228/Sounds/starter.wav</path>
+      <path>Aircraft/EV55/Sounds/starter.wav</path>
       <property>/engines/engine[1]/running</property>
       <volume>
         <offset>-0.50</offset>
@@ -159,7 +159,7 @@
     <engine>
       <name>engine</name>
       <mode>looped</mode>
-      <path>Aircraft/DO-228/Sounds/running.wav</path>
+      <path>Aircraft/EV55/Sounds/running.wav</path>
       <condition>
         <property>/engines/engine[1]/running</property>
         <less-than>
@@ -187,7 +187,7 @@
     <engine>
       <name>enginerun</name>
       <mode>looped</mode>
-      <path>Aircraft/DO-228/Sounds/running.wav</path>
+      <path>Aircraft/EV55/Sounds/running.wav</path>
       <condition>
         <property>/engines/engine[1]/running</property>
         <greater-than>
@@ -235,7 +235,7 @@
     <gear>
       <name>gear</name>
       <mode>in-transit</mode>
-      <path>Aircraft/DO-228/Sounds/gear-up.wav</path>
+      <path>Aircraft/EV55/Sounds/gear-up.wav</path>
       <property>/gear/gear[0]/position-norm</property>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
@@ -292,7 +292,7 @@
     <flap>
       <name>flaps</name>
       <mode>in-transit</mode>
-      <path>Aircraft/DO-228/Sounds/flaps.wav</path>
+      <path>Aircraft/EV55/Sounds/flaps.wav</path>
       <property>/surface-positions/flap-pos-norm</property>
       <volume>
         <factor>0.2</factor>
@@ -304,7 +304,7 @@
     <wind>
       <name>wind</name>
       <mode>looped</mode>
-      <path>Aircraft/DO-228/Sounds/wind.wav</path>
+      <path>Aircraft/EV55/Sounds/wind.wav</path>
       <property>/velocities/airspeed-kt</property>
       <volume>
         <property>/velocities/airspeed-kt</property>
@@ -370,7 +370,7 @@
     <rain>
       <name>rain</name>
       <mode>looped</mode>
-      <path>Aircraft/DO-228/Sounds/rain_canopy.wav</path>
+      <path>Aircraft/EV55/Sounds/rain_canopy.wav</path>
       <condition>
         <greater-than>
           <property>/environment/metar/rain-norm</property>

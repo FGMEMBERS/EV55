@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>engineswitches.ac</path>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Handle</object-name>
+    <property>controls/gear/gear-down</property>
+    <factor> 180 </factor>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m> 0.0 </z-m>
+    </center>
+  </animation>
+  <!--Engine Left Master switch-->
+  <animation>
+    <type>pick</type>
+    <object-name>engLswitch</object-name>
+    <action>
+      <button> 0 </button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/electric/battery-switch</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[0]/master-switch</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[0]/cutoff</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[0]/fuel-pump</property>
+      </binding>
+      <binding>
+        <command>property-cycle</command>
+        <property>controls/engines/engine[0]/condition</property>
+        <value>1</value>
+        <value>0</value>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>engLswitch</object-name>
+        <property>controls/engines/engine[0]/master-switch</property>
+        <factor>-50</factor>
+        <center>
+            <x-m>-5.06832</x-m>
+            <z-m>-1.22949</z-m>
+        </center>
+        <axis>
+            <y>1</y>
+            </axis>
+  </animation>
+  <!--Engine Right Master switch-->
+  <animation>
+    <type>pick</type>
+    <object-name>engRswitch</object-name>
+    <action>
+      <button> 0 </button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[1]/cutoff</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[1]/master-switch</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[1]/fuel-pump</property>
+      </binding>
+      <binding>
+        <command>property-cycle</command>
+        <property>controls/engines/engine[1]/condition</property>
+        <value>1</value>
+        <value>0</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>engRswitch</object-name>
+        <property>controls/engines/engine[1]/master-switch</property>
+        <factor>-50</factor>
+        <center>
+            <x-m>-5.06832</x-m>
+            <z-m>-1.22949</z-m>
+        </center>
+        <axis>
+            <y>1</y>
+            </axis>
+  </animation>
+  <!--Engine Left Running-->
+  <animation>
+    <type>material</type>
+    <object-name>engLstartind</object-name>
+    <condition>
+            <property>/engines/engine/running</property>
+    </condition>
+    <ambient>
+        <red>0</red>
+        <green>1</green>
+        <blue>0</blue>
+    </ambient>
+    <emission>
+        <red>0</red>
+        <green>1</green>
+        <blue>0</blue>
+    </emission>
+  </animation> 
+  <!--Engine Right Running-->
+  <animation>
+    <type>material</type>
+    <object-name>engRstartind</object-name>
+    <condition>
+            <property>/engines/engine[1]/running</property>
+    </condition>
+    <ambient>
+        <red>0</red>
+        <green>1</green>
+        <blue>0</blue>
+    </ambient>
+    <emission>
+        <red>0</red>
+        <green>1</green>
+        <blue>0</blue>
+    </emission>
+  </animation>
+  <!--Seems to be not needed atm (???)
+  <animation>
+    <type>pick</type>
+    <object-name>starterswitch</object-name>
+    <action>
+      <button> 0 </button>
+      <repeatable>false</repeatable>
+      <binding>
+          <condition><not>
+                  <property>controls/engines/engine[1]/starter</property>
+                  </not>
+          </condition>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[0]/starter</property>
+      </binding>
+    </action>
+    <action>
+      <button> 1 </button>
+      <repeatable>false</repeatable>
+      <binding>
+          <condition><not>
+                  <property>controls/engines/engine[0]/starter</property></not></condition>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[1]/starter</property>
+      </binding>
+    </action>
+  </animation>-->
+
+</PropertyList>

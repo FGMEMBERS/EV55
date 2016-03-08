@@ -30,27 +30,4 @@
   </center>
  </animation>
 
- <animation>
-   <type>select</type>
-  <object-name>yoke</object-name>
-   <condition>
-     <not>
-       <property>sim/model/hide-yoke</property>
-     </not>
-   </condition>
- </animation>
-
- <animation>
-   <type>pick</type>
-   <object-name>YokeMount</object-name>
-   <visible>true</visible>
-   <action>
-     <button>0</button>
-     <repeatable>false</repeatable>
-     <binding>
-       <command>property-toggle</command>
-       <property>sim/model/hide-yoke</property>
-     </binding>
-   </action>
- </animation>
 </PropertyList>
