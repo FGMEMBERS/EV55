@@ -3,7 +3,7 @@
 <PropertyList>
   <nasal>
     <load>
-      var livery_update = aircraft.livery_update.new("Aircraft/Tecnam-P2010/Models/Liveries", 10);
+      var livery_update = aircraft.livery_update.new("Aircraft/EV55/Models/Liveries", 10);
 
       var self = cmdarg();
 
@@ -145,6 +145,27 @@
       <x> 0 </x>
       <y> 0 </y>
       <z> 1 </z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>Nosegear</object-name>
+    <property>controls/flight/rudder</property>
+    <condition><equals>
+    <property>gear/gear[0]/position-norm</property>
+    <value>1</value>
+</equals>
+</condition>
+    <factor>40</factor>
+    <center>
+      <x-m> -5.3689 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>-1.8738</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> -1 </z>
     </axis>
   </animation>
   
