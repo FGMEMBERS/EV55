@@ -135,6 +135,47 @@
         <blue>0</blue>
     </emission>
   </animation>
+<!--Flapslever-->
+ <animation>
+    <type>slider</type>
+        <object-name>flapslever</object-name>
+    <drag-direction>vertical</drag-direction>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/flight/flaps</property>
+        <factor>-0.05</factor>
+        <min>0</min>
+        <max>1</max>
+        <wrap>0</wrap>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <label>Flaps: %3d%%</label>
+        <measure-text>Flaps: 100%</measure-text>
+        <tooltip-id>flaps</tooltip-id>
+        <mapping>percent</mapping>
+        <property>controls/flight/flaps</property>
+      </binding>
+    </hovered>
+  </animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>flapslever</object-name>
+        <property>controls/flight/flaps</property>
+        <factor>40</factor>
+        <center>
+            <x-m>-4.9608</x-m>
+            <z-m>-1.4541</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
 <!--Mixture and Throttle-->
 <!--Throttle-->
  <animation>
@@ -156,7 +197,7 @@
         <command>set-tooltip</command>
         <label>Throttle Left: %3d%%</label>
         <measure-text>Throttle Left: 100%</measure-text>
-        <tooltip-id>throttle</tooltip-id>
+        <tooltip-id>throttleL</tooltip-id>
         <mapping>percent</mapping>
         <property>controls/engines/engine[0]/throttle</property>
       </binding>
@@ -196,7 +237,7 @@
         <command>set-tooltip</command>
         <label>Throttle Right: %3d%%</label>
         <measure-text>Throttle Right: 100%</measure-text>
-        <tooltip-id>throttle</tooltip-id>
+        <tooltip-id>throttleR</tooltip-id>
         <mapping>percent</mapping>
         <property>controls/engines/engine[1]/throttle</property>
       </binding>
@@ -237,7 +278,7 @@
         <command>set-tooltip</command>
         <label>Mixture Left: %3d%%</label>
         <measure-text>Mixture Left: 100%</measure-text>
-        <tooltip-id>throttle</tooltip-id>
+        <tooltip-id>mixtureL</tooltip-id>
         <mapping>percent</mapping>
         <property>controls/engines/engine[0]/mixture</property>
       </binding>
@@ -278,7 +319,7 @@
         <command>set-tooltip</command>
         <label>Mixture Right: %3d%%</label>
         <measure-text>Mixture Right: 100%</measure-text>
-        <tooltip-id>throttle</tooltip-id>
+        <tooltip-id>mixtureR</tooltip-id>
         <mapping>percent</mapping>
         <property>controls/engines/engine[1]/mixture</property>
       </binding>
