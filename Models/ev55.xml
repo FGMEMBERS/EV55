@@ -47,6 +47,11 @@
      <effect>
     <inherits-from>Effects/reflect</inherits-from>
     <object-name>body</object-name>
+    <object-name>doorFL</object-name>
+    <object-name>doorFR</object-name>
+    <object-name>doorR1</object-name>
+    <object-name>doorR1D</object-name>
+    <object-name>doorR2</object-name>
     <object-name>vstab</object-name>
     <object-name>hstab</object-name>   
     <object-name>wing.001</object-name>
@@ -135,7 +140,8 @@
     <name>Nosegear</name>
     <object-name>wheelFL</object-name>
     <object-name>wheelFR</object-name>
-    <object-name>gearF</object-name>
+    <object-name>gearF1</object-name>
+    <object-name>gearF2</object-name>
   </animation>
   <animation>
     <type>translate</type>
