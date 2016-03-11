@@ -69,9 +69,11 @@ update_electrical = func {
     var volts=0;
     var AC=0;
     var invrtr=getprop("controls/electric/inverter-switch") or 0;
-    var gen1=getprop("engines/engine[0]/running") * getprop("controls/electric/engine/bus-tie");
-    var gen2=getprop("engines/engine[1]/running") * getprop("controls/electric/engine[1]/bus-tie");
-    if(getprop("controls/electric/battery-switch")){power=1;volts=24;}
+    var gen1=getprop("engines/engine[0]/running") * getprop("controls/electric/engine/generator");
+    var gen2=getprop("engines/engine[1]/running") * getprop("controls/electric/engine[1]/generator");
+    if(getprop("/controls/electric/master")){
+    if(getprop("controls/electric/batteryL")or getprop("controls/electric/batteryR")){power=1;volts=24;};
+    }
     if(gen1){power=1;volts=28;load1=1.0;if(gen2)load1-=0.5;}
     if(gen2){power=1;volts=28;load2=1.0;if(gen1)load2-=0.5;}
     setprop("systems/electrical/gen-load[0]",load1);
@@ -79,6 +81,7 @@ update_electrical = func {
     setprop("systems/electrical/volts",volts);
     AC = 115 * (invrtr*power);
     setprop("systems/electrical/AC",AC);
+    setprop("systems/electrical/power", power);
     update_strobes(power);
     if(count==0)update_bus1(power);
     if(count==1)update_bus2(volts);

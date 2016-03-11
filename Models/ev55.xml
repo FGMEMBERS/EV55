@@ -64,6 +64,85 @@
   <model>
       <path>Interior/interior.xml</path>
   </model>
+  <!--LIGHTS-->
+  <model>
+      <path>light/light-cone-taxi.xml</path>
+      <offsets>
+            <x-m>-2.7483</x-m>
+            <y-m>1.0636</y-m>
+            <z-m>-1.8053</z-m>
+            <heading-deg>-5</heading-deg>
+            </offsets>
+  </model>
+  <model>
+      <path>light/light-cone-taxi.xml</path>
+      <offsets>
+            <x-m>-2.7483</x-m>
+            <y-m>-1.0636</y-m>
+            <z-m>-1.8053</z-m>
+            <heading-deg>5</heading-deg>
+            </offsets>
+  </model>
+  <model>
+      <path>light/light-cone.xml</path>
+      <offsets>
+            <x-m>-2.7483</x-m>
+            <y-m>1.0636</y-m>
+            <z-m>-1.8053</z-m>
+            <heading-deg>-5</heading-deg>
+            </offsets>
+  </model>
+  <model>
+      <path>light/light-cone.xml</path>
+      <offsets>
+            <x-m>-2.7483</x-m>
+            <y-m>-1.0636</y-m>
+            <z-m>-1.8053</z-m>
+            <heading-deg>5</heading-deg>
+            </offsets>
+  </model>
+  <model>
+      <path>light/RedLight.xml</path>
+      <offsets>
+            <x-m>-1.1963</x-m>
+            <y-m>-7.9072</y-m>
+            <z-m>0.0719</z-m>
+            </offsets>
+  </model>
+  <model>
+      <path>light/GreenLight.xml</path>
+      <offsets>
+            <x-m>-1.1963</x-m>
+            <y-m>7.9072</y-m>
+            <z-m>0.0719</z-m>
+            </offsets>
+  </model>
+  <model>
+      <path>light/StrobeLight.xml</path>
+      <offsets>
+            <x-m>-1.1963</x-m>
+            <y-m>7.9072</y-m>
+            <z-m>0.0719</z-m>
+            </offsets>
+  </model>
+  <model>
+      <path>light/StrobeLight.xml</path>
+      <offsets>
+            <x-m>-1.1963</x-m>
+            <y-m>-7.9072</y-m>
+            <z-m>0.0719</z-m>
+            </offsets>
+  </model>
+  <model>
+      <path>light/beacon.xml</path>
+      <offsets>
+            <x-m>1.4496</x-m>
+            <y-m>-0.0</y-m>
+            <z-m>-1.9344</z-m>
+            </offsets>
+  </model>
+  
+  
   <animation>
     <name>Gearleft</name>
     <object-name>gearL1</object-name>

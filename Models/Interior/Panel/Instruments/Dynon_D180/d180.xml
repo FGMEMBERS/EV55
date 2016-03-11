@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Dynon EFIS-->
+
+<PropertyList>
+<path>screens.ac</path>
+
+<!--Simulating the Dynon D180-->
+<!--Off and loading screens-->
+<animation>
+<type>select</type>
+<object-name>dynon_screenoff</object-name>
+<object-name>dynonscreenoff2</object-name>
+<object-name>dynon_screenloading</object-name>
+<object-name>dynon_screenloading2</object-name>
+<condition>
+		<not>
+			<property>/systems/electrical/power</property>
+			<property>/controls/electric/avionics1-switch</property>
+		</not>
+</condition>
+</animation>
+<animation>
+<type>select</type>
+<object-name>dynon_screenloading</object-name>
+<object-name>dynon_screenloading2</object-name>
+<condition>
+<less-than>
+<property>/instrumentation/dynon-efis/ready</property>
+<value>1</value>
+</less-than>
+</condition>
+</animation>
+<!--Softkeys-->
+<!--right-->
+ <animation>
+    <type>pick</type>
+    <object-name>dynon_left_btn6</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-cycle</command>
+        <property>/instrumentation/dynon-efis/sideviews</property>
+	<value>eng</value>
+	<value>oattrim</value>
+	<value>fuel</value>
+	<value>time</value>
+	<value>hsi</value>
+      </binding>
+      <binding>
+<condition>
+        <property>/instrumentation/dynon-efis/menu1</property>
+</condition>
+        <command>property-toggle</command>
+        <property>/instrumentation/dynon-efis/menu1</property>
+      </binding>
+      <binding>
+<condition>
+        <property>/instrumentation/dynon-efis/qnh1</property>
+</condition>
+        <command>property-toggle</command>
+        <property>/instrumentation/dynon-efis/qnh1</property>
+      </binding>
+      <binding>
+          <command>property-toggle</command>
+          <property>sim/model/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+<!--set QNH-->
+ <animation>
+    <type>pick</type>
+    <object-name>dynon_left_btn2</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+<condition>
+        <property>/instrumentation/dynon-efis/menu1</property>
+</condition>
+        <command>property-toggle</command>
+        <property>/instrumentation/dynon-efis/qnh1</property>
+      </binding>
+      <binding>
+<condition>
+        <property>/instrumentation/dynon-efis/menu1</property>
+</condition>
+        <command>property-toggle</command>
+        <property>/instrumentation/dynon-efis/menu1</property>
+      </binding>
+      <binding>
+          <command>property-toggle</command>
+          <property>sim/model/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+<animation>
+<type>select</type>
+<object-name>qnh</object-name>
+<condition>
+        <property>/instrumentation/dynon-efis/qnh1</property>
+</condition>
+</animation>
+<!--a middle ones - apply menu-->
+ <animation>
+    <type>pick</type>
+    <object-name>dynon_left_btn2</object-name>
+    <object-name>dynon_left_btn3</object-name>
+    <object-name>dynon_left_btn4</object-name>
+    <object-name>dynon_left_btn5</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+<condition><not>
+        <property>/instrumentation/dynon-efis/menu1</property>
+</not></condition>
+        <command>property-toggle</command>
+        <property>/instrumentation/dynon-efis/menu1</property>
+      </binding>
+      <binding>
+          <command>property-toggle</command>
+          <property>sim/model/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+<animation>
+<type>select</type>
+<object-name>menu</object-name>
+<condition>
+        <property>/instrumentation/dynon-efis/menu1</property>
+</condition>
+</animation>
+
+<!--HSI sideview-->
+
+<animation>
+<type>select</type>
+<object-name>hsi</object-name>
+<object-name>hdg2.100</object-name>
+<object-name>hdg2.10</object-name>
+<object-name>hdg2.1</object-name>
+<condition><equals>
+<property>/instrumentation/dynon-efis/sideviews</property>
+<value>hsi</value>
+</equals>
+</condition>
+</animation>
+
+<animation>
+  <type>texrotate</type>
+<object-name>hsi</object-name>
+<property>/orientation/heading-deg</property>
+    <center>
+      <x> 0.5 </x>
+      <y> 0.5 </y>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z> -1 </z>
+    </axis>
+</animation>
+<animation>
+<type>texmultiple</type>
+<object-name>dynonscreen1</object-name>
+<object-name>dynonscreen2</object-name>
+<transform>
+  <subtype>texrotate</subtype>
+<property>/orientation/roll-deg</property>
+      <min> -180 </min>
+      <max>  180 </max>
+      <center>
+        <x> 0.5 </x>
+        <y> 0.5 </y>
+      </center>
+      <axis>
+        <x>  0 </x>
+        <y>  0 </y>
+        <z> -1 </z>
+      </axis>
+</transform>
+    <transform>
+      <subtype>textranslate</subtype>
+      <property>/instrumentation/attitude-indicator/indicated-pitch-deg</property>
+      <factor> 0.005 </factor>
+      <center>
+        <x> 0.5 </x>
+        <y> 0.5 </y>
+      </center>
+      <axis>
+        <x> 0 </x>
+        <y> 1 </y>
+        <z> 0 </z>
+      </axis>
+    </transform>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>hi</object-name>
+<object-name>hi2</object-name>
+<property>/orientation/heading-deg</property>
+<factor>0.002775</factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+
+<animation>
+<type>textranslate</type>
+<object-name>asi.tape</object-name>
+<object-name>asi.tape2</object-name>
+<property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+<factor>0.0025</factor>
+      <axis>
+        <x>  0 </x>
+        <y>  1 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<!--ASI detail-->
+ <animation>
+    <type>textranslate</type>
+    <object-name>asi.100</object-name>
+    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <step>100</step>
+    <factor> 0.001 </factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>textranslate</type>
+    <object-name>asi.10</object-name>
+    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <step>10</step>
+    <factor> 0.01 </factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>textranslate</type>
+    <object-name>asi.1</object-name>
+    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <factor> 0.1 </factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+
+<animation>
+<type>textranslate</type>
+<object-name>alt.tape</object-name>
+<object-name>alt.tape2</object-name>
+<property>/instrumentation/altimeter/indicated-altitude-ft</property>
+<factor>0.0000437</factor>
+      <axis>
+        <x>  0 </x>
+        <y>  1 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<!--ALT detail-->
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>alt.10000</object-name>
+    <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+    <step> 10000 </step>
+    <factor> -0.00001 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>textranslate</type>
+    <object-name>alt.01000</object-name>
+    <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+    <step> 1000 </step>
+    <factor> -0.0001 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>textranslate</type>
+    <object-name>alt.00100</object-name>
+    <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+    <step> 100 </step>
+    <factor> -0.001 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>textranslate</type>
+    <object-name>alt.00010</object-name>
+    <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+    <factor> -0.01 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  <!--HDG detail - experimental-->
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>hdg.100</object-name>
+    <object-name>hdg2.100</object-name>
+    <object-name>hdg3.100</object-name>
+    <object-name>hdg4.100</object-name>
+    <property>orientation/heading-deg</property>
+    <step> 100 </step>
+    <factor> -0.001 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>textranslate</type>
+    <object-name>hdg.10</object-name>
+    <object-name>hdg2.10</object-name>
+    <object-name>hdg3.10</object-name>
+    <object-name>hdg4.10</object-name>
+    <property>orientation/heading-deg</property>
+    <step> 10 </step>
+    <factor> -0.01 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>textranslate</type>
+    <object-name>hdg.1</object-name>
+    <object-name>hdg2.1</object-name>
+    <object-name>hdg3.1</object-name>
+    <object-name>hdg4.1</object-name>
+    <property>orientation/heading-deg</property>
+    <step> 1 </step>
+    <factor> -0.01 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+<!--OSG text-->
+
+<!-- <panel>
+    <path>Aircraft/CH650/Models/Interior/Panel/dynon-text.xml</path>
+    <bottom-left>
+      <x-m> -0.7219</x-m>
+      <y-m> -0.30224</y-m>
+      <z-m> 0.07052 </z-m>
+    </bottom-left>
+    <bottom-right>
+      <x-m>  -0.7219 </x-m>
+      <y-m>  -0.14929</y-m>
+      <z-m> 0.07052</z-m>
+    </bottom-right>
+    <top-left>
+      <x-m>  -0.7219 </x-m>
+      <y-m> -0.30247 </y-m>
+      <z-m> 0.15674</z-m>
+    </top-left>
+  </panel>-->
+</PropertyList>
+
+

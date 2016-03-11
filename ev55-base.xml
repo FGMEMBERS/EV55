@@ -263,6 +263,7 @@
             <nav-data type="string">GSP</nav-data>
         </unit>
     </efis>
+    <dynon-efis><ready type="float">0</ready></dynon-efis>
     </instrumentation>
 
     <engines>
@@ -285,6 +286,7 @@
       <file>Nasal/doors.nas</file>
     </doors>
     <systems>
+      <file>Models/Interior/Panel/Instruments/Dynon_D180/d180.nas</file>
       <file>Nasal/liveries.nas</file>
       <file>Nasal/light.nas</file>
       <file>Nasal/systems.nas</file>

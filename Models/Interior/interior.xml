@@ -13,7 +13,43 @@
       <z-m> -1.23647 </z-m>
     </offsets>
   </model>
+   <animation>
+    <type>material</type>
+    <object-name>interior</object-name>
+    <object-name>seats</object-name>
+    <object-name>doorFLint</object-name>
+    <object-name>doorFRint</object-name>
+    <object-name>doorR1int</object-name>
+    <object-name>doorR1Dint</object-name>
+    <object-name>doorR2int</object-name>
+    <condition>
+      <property>systems/electrical/power</property>
+            <property>/controls/lighting/cabin-dome</property>
+    </condition>
+    <emission>
+        <red>0.5</red>
+        <green>0.5</green>
+        <blue>0.5</blue>
+    </emission>
+  </animation>
   <!--PANEL-->
+   <animation>
+    <type>material</type>
+    <object-name>Panel.002</object-name>
+    <object-name>Panel.003</object-name>
+    <object-name>Middleconsole</object-name>
+    <condition>
+      <property>systems/electrical/power</property>
+            <property>/controls/lighting/instrument-lights</property>
+    </condition>
+    <emission>
+        <red>1</red>
+        <green>1</green>
+        <blue>1</blue>
+        <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    </emission>
+  </animation>
+  
   <!--Engine switches-->
   <model>
     <path>Aircraft/EV55/Models/Interior/Panel/Instruments/engineswitches/engineswitches.xml</path>
@@ -165,10 +201,10 @@
         <type>rotate</type>
         <object-name>flapslever</object-name>
         <property>controls/flight/flaps</property>
-        <factor>40</factor>
+        <factor>32</factor>
         <center>
-            <x-m>-4.9608</x-m>
-            <z-m>-1.4541</z-m>
+            <x-m>-4.8053</x-m>
+            <z-m>-1.4819</z-m>
         </center>
         <axis>
             <x>0</x>
@@ -209,8 +245,8 @@
         <property>/controls/engines/engine[0]/throttle</property>
         <factor>-70</factor>
         <center>
-            <x-m>-4.957</x-m>
-            <z-m>-1.3269</z-m>
+            <x-m>-4.7799</x-m>
+            <z-m>-1.3142</z-m>
         </center>
         <axis>
             <x>0</x>
@@ -249,8 +285,8 @@
         <property>/controls/engines/engine[1]/throttle</property>
         <factor>-70</factor>
         <center>
-            <x-m>-4.957</x-m>
-            <z-m>-1.3269</z-m>
+            <x-m>-4.7799</x-m>
+            <z-m>-1.3142</z-m>
         </center>
         <axis>
             <x>0</x>
@@ -291,8 +327,8 @@
         <property>/controls/engines/engine[0]/mixture</property>
         <factor>-70</factor>
         <center>
-            <x-m>-4.957</x-m>
-            <z-m>-1.3269</z-m>
+            <x-m>-4.7799</x-m>
+            <z-m>-1.3142</z-m>
         </center>
         <axis>
             <x>0</x>
@@ -331,8 +367,8 @@
         <property>/controls/engines/engine[1]/mixture</property>
         <factor>-70</factor>
         <center>
-            <x-m>-4.957</x-m>
-            <z-m>-1.3269</z-m>
+            <x-m>-4.7799</x-m>
+            <z-m>-1.3142</z-m>
         </center>
         <axis>
             <x>0</x>

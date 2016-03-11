@@ -4,12 +4,17 @@
 
 <!--  <path>panel.ac</path>-->
 
-
+    <model>
+        <path>Instruments/Dynon_D180/d180.xml</path>
+        <offsets><z-m>0.185</z-m>
+            <y-m>-0.525</y-m>
+        <x-m>0.14</x-m></offsets>
+    </model>
     <model>
         <path>Instruments/zkv1000/pfd.xml</path>
         <offsets><z-m>0.2</z-m>
             <y-m>-0.32</y-m>
-            <x-m>-0.02</x-m></offsets>
+        <x-m>0.14</x-m></offsets>
     </model>
    <!-- <model>
         <path>Instruments/pfd/pfd.xml</path>
@@ -22,13 +27,13 @@
         <path>Instruments/zkv1000/pfd.xml</path>
         <offsets><z-m>0.2</z-m>
             <y-m>0.32</y-m>
-        <x-m>-0.02</x-m></offsets>
+        <x-m>0.14</x-m></offsets>
     </model>
         <model>
         <path>Instruments/zkv1000/mfd.xml</path>
         <offsets><z-m>0.2</z-m>
             <y-m>0.00</y-m>
-            <x-m>-0.02</x-m></offsets>
+        <x-m>0.14</x-m></offsets>
         
     </model>
     <!--Yokes-->
@@ -36,19 +41,12 @@
         <path>Instruments/yoke/yoke.xml</path>
         <offsets><z-m>0.02</z-m>
             <y-m>0.35</y-m>
-        <x-m>0.08</x-m></offsets>
+        <x-m>0.26</x-m></offsets>
     </model>
            <model>
         <path>Instruments/yoke/yoke.xml</path>
         <offsets><z-m>0.02</z-m>
             <y-m>-0.35</y-m>
-        <x-m>0.08</x-m></offsets>
-    </model>
-               <model>
-        <path>Instruments/gear/gear.xml</path>
-        <offsets><z-m>0.05</z-m>
-            <y-m>-0.13</y-m>
-        <x-m>0.01</x-m>
-        <pitch-deg>-48</pitch-deg></offsets>
+        <x-m>0.26</x-m></offsets>
     </model>
 </PropertyList>
