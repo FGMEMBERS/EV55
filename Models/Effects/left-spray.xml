@@ -25,7 +25,7 @@
                 </greater-than>
                 <less-than>
                 	<property>position/altitude-agl-ft</property>
-                	<value>8</value>
+                	<value>10</value>
                 </less-than>
                 <not>
                 	<property>sim/crashed</property>

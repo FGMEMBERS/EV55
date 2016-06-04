@@ -17,18 +17,19 @@
 
 <airplane mass="5789" version="YASIM_VERSION_CURRENT">
 
-  <approach speed="64" aoa="6" fuel="0.3">
+  <approach speed="78" aoa="6" fuel="0.5">
   <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
   <control-setting axis="/controls/engines/engine[1]/throttle" value="0.2"/>
   <control-setting axis="/controls/engines/engine[0]/condition" value="1"/>
   <control-setting axis="/controls/engines/engine[1]/condition" value="1"/>
   <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1"/>
   <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="1"/>
-  <control-setting axis="/controls/gear/gear-down" value="1"/>
-  <control-setting axis="/controls/flight/flaps" value="1"/>
+  <control-setting axis="/controls/flight/flaps" value="0.0"/>
+        <solve-weight idx="0" weight="360"/>
+        <solve-weight idx="1" weight="3150"/>
   </approach>
 
-  <cruise speed="180" alt="5000">
+  <cruise speed="220" alt="10000">
   <control-setting axis="/controls/engines/engine[0]/throttle" value="0.9"/>
   <control-setting axis="/controls/engines/engine[1]/throttle" value="0.9"/>
   <control-setting axis="/controls/engines/engine[0]/condition" value="0.65"/>
@@ -187,7 +188,7 @@
         <control-input axis="/controls/gear/brake-park" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 
-        <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
+        <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
 
         <control-speed control="EXTEND" transition-time="5"/>
   </gear>
@@ -203,7 +204,7 @@
         <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 
-        <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+        <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
 
         <control-speed control="EXTEND" transition-time="7"/>
   </gear>
@@ -220,7 +221,7 @@
         <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 
-        <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
+        <control-output control="EXTEND" prop="/gear/gear[3]/position-norm"/>
 
         <control-speed control="EXTEND" transition-time="6"/>
   </gear>
@@ -228,32 +229,32 @@
 <!--Floats-->
 
   <!-- Front Left-->
-  <gear x="5.02932" y="1.80361" z="-3" 
+  <gear x="5.02932" y="1.80361" z="-2.9" 
         compression="0.4"  
         spring="15" 
         damp="8" 
-        sfric="0.4" 
-        dfric="0.3" 
+        sfric="1.2" 
+        dfric="0.7" 
         on-water="1" 
         on-solid="0"
         ignored-by-solver="1"
-        reduce-friction-by-extension="1.0"
-        speed-planing="25" 
-        spring-factor-not-planing="0.2">
+        reduce-friction-by-extension="1.5"
+        speed-planing="15" 
+        spring-factor-not-planing="0.3">
   </gear>
   <!--Front Right -->
-  <gear x="5.02932" y="-1.80361" z="-3"
+  <gear x="5.02932" y="-1.80361" z="-2.9"
         compression="0.4"  
         spring="15" 
         damp="8" 
-        sfric="0.4" 
-        dfric="0.3" 
+        sfric="1.2" 
+        dfric="0.7" 
         on-water="1" 
         on-solid="0"
         ignored-by-solver="1"
-        reduce-friction-by-extension="1.0"
-        speed-planing="25" 
-        spring-factor-not-planing="0.2">
+        reduce-friction-by-extension="1.5"
+        speed-planing="15" 
+        spring-factor-not-planing="0.3">
   </gear>
   <!-- Mid Left -->
  <!-- <gear x="2.30279" y="1.80361" z="-3.2"   compression="1.5" spring = "15" sfric = "1.2" dfric = "0.7" ignored-by-solver="1"
@@ -267,33 +268,33 @@
       speed-planing="15" spring-factor-not-planing="0.3">
   </gear>-->
   <!-- Roue gauche -->
-  <gear x="-1.78157" y="1.80361" z="-2.69151"
+  <gear x="-1.78157" y="1.80361" z="-2.59151"
         compression="0.4"  
         spring="15" 
         damp="8" 
-        sfric="0.4" 
-        dfric="0.3" 
+        sfric="1.2" 
+        dfric="0.7" 
         on-water="1" 
         on-solid="0"
         ignored-by-solver="1"
-        reduce-friction-by-extension="1.0"
+        reduce-friction-by-extension="1.2"
         speed-planing="25" 
-        spring-factor-not-planing="0.2">
+        spring-factor-not-planing="0.3">
   </gear>
 
   <!-- Roue droite -->
-  <gear x="-1.78157" y="-1.80361" z="-2.69151" 
+  <gear x="-1.78157" y="-1.80361" z="-2.59151" 
         compression="0.4"  
         spring="15" 
         damp="8" 
-        sfric="0.4" 
-        dfric="0.3" 
+        sfric="1.2" 
+        dfric="0.7" 
         on-water="1" 
         on-solid="0"
         ignored-by-solver="1"
-        reduce-friction-by-extension="1.0"
+        reduce-friction-by-extension="1.2"
         speed-planing="25" 
-        spring-factor-not-planing="0.2">
+        spring-factor-not-planing="0.3">
   </gear>
 
  <weight x="4.25947" y="0" z="-1.09557" mass-prop="/sim/weight[0]/weight-lb"/> <!-- Crew -->

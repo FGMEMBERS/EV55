@@ -48,9 +48,9 @@
     <path>Effects/left-spray.xml</path>
     <name>smoke-s</name>
     <offsets>
-      <x-m>-1.70</x-m>
-      <y-m>-1.7</y-m>
-      <z-m>-2.0</z-m>
+      <x-m>-1.9549</x-m>
+      <y-m>-1.7965</y-m>
+      <z-m>-2.6457</z-m>
     </offsets>
   </model>
 
@@ -58,23 +58,31 @@
     <path>Effects/right-spray.xml</path>
     <name>smoke-s</name>
     <offsets>
-      <x-m>-1.70</x-m>
-      <y-m>1.7</y-m>
-      <z-m>-2.0</z-m>
+      <x-m>-1.9549</x-m>
+      <y-m>1.7965</y-m>
+      <z-m>-2.6457</z-m>
     </offsets>
   </model>
 
      <effect>
     <inherits-from>Effects/reflect</inherits-from>
     <object-name>body</object-name>
+    <object-name>doorBFL</object-name>
+    <object-name>doorBFR</object-name>
     <object-name>doorFL</object-name>
     <object-name>doorFR</object-name>
     <object-name>doorR1</object-name>
     <object-name>doorR1D</object-name>
     <object-name>doorR2</object-name>
     <object-name>vstab</object-name>
+    <object-name>rudder</object-name>   
     <object-name>hstab</object-name>   
-    <object-name>wing.001</object-name>
+    <object-name>Wing.001</object-name>
+    <object-name>aileronL</object-name>
+    <object-name>aileronR</object-name>
+    <object-name>flaps</object-name>
+    <object-name>Cylinder</object-name>
+    <object-name>floats</object-name>
   </effect>
     <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
@@ -164,19 +172,13 @@
   
   
   <animation>
-    <name>Gearleft</name>
-    <object-name>gearL1</object-name>
-    <object-name>gearL2</object-name>
-    <object-name>wheelL</object-name>
-  </animation>
-  
-  <animation>
-    <type>rotate</type>
-    <object-name>Gearleft</object-name>
-    <property>gear/gear[1]/position-norm</property>
+    <type>translate</type>
+    <object-name>gearFL</object-name>
+    <object-name>wheelFL</object-name>
+    <property>gear/gear[0]/position-norm</property>
     <interpolation>
-      <entry><ind> 0 </ind><dep> 100 </dep></entry>
-      <entry><ind> 1 </ind><dep>  0 </dep></entry>
+      <entry><ind> 0 </ind><dep> 0 </dep></entry>
+      <entry><ind> 1 </ind><dep>  -0.3276 </dep></entry>
     </interpolation>
     <center>
       <x-m> -1.81789 </x-m>
@@ -184,9 +186,63 @@
       <z-m>-1.8 </z-m>
     </center>
     <axis>
-      <x> 1 </x>
+      <x> 0 </x>
       <y> 0 </y>
-      <z> 0 </z>
+      <z> 1 </z>
+    </axis>
+</animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>gearFR</object-name>
+    <object-name>wheelFR</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0 </dep></entry>
+      <entry><ind> 1 </ind><dep>  -0.3276 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -1.81789 </x-m>
+      <y-m>-1.06506</y-m>
+      <z-m>-1.8 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+</animation>
+  <animation>
+    <type>translate</type>
+    <object-name>wheelRL</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0 </dep></entry>
+      <entry><ind> 1 </ind><dep>  -0.3276 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -1.81789 </x-m>
+      <y-m>-1.06506</y-m>
+      <z-m>-1.8 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+</animation>
+  <animation>
+    <type>translate</type>
+    <object-name>wheelRR</object-name>
+    <property>gear/gear[3]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0 </dep></entry>
+      <entry><ind> 1 </ind><dep>  -0.3276 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
     </axis>
 </animation>
 
@@ -235,17 +291,11 @@
       <z> 0 </z>
     </axis>
   </animation>
-    <animation>
-    <name>Nosegear</name>
-    <object-name>wheelFL</object-name>
-    <object-name>wheelFR</object-name>
-    <object-name>gearF1</object-name>
-    <object-name>gearF2</object-name>
-  </animation>
   <animation>
     <type>translate</type>
-    <object-name>Nosegear</object-name>
-    <property>gear/gear[1]/compression-m</property>
+    <object-name>gearFL</object-name>
+    <object-name>wheelFL</object-name>
+    <property>gear/gear[0]/compression-m</property>
     <axis>
       <x> 0 </x>
       <y> 0 </y>
@@ -253,44 +303,14 @@
     </axis>
   </animation>
   <animation>
-    <type>rotate</type>
-    <object-name>Nosegear</object-name>
-    <property>controls/flight/rudder</property>
-    <condition><equals>
-    <property>gear/gear[0]/position-norm</property>
-    <value>1</value>
-</equals>
-</condition>
-    <factor>40</factor>
-    <center>
-      <x-m> -5.3689 </x-m>
-      <y-m>  0.00000 </y-m>
-      <z-m>-1.8738</z-m>
-    </center>
+    <type>translate</type>
+    <object-name>gearFR</object-name>
+    <object-name>wheelFR</object-name>
+    <property>gear/gear[0]/compression-m</property>
     <axis>
       <x> 0 </x>
       <y> 0 </y>
-      <z> -1 </z>
-    </axis>
-  </animation>
-  
-  <animation>
-    <type>rotate</type>
-    <object-name>Nosegear</object-name>
-    <property>gear/gear[0]/position-norm</property>
-    <interpolation>
-      <entry><ind> 0 </ind><dep> 150 </dep></entry>
-      <entry><ind> 1 </ind><dep>   0 </dep></entry>
-    </interpolation>
-    <center>
-      <x-m> -5.36508 </x-m>
-      <y-m>  0.00000 </y-m>
-      <z-m>-1.85403</z-m>
-    </center>
-    <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <z> 1 </z>
     </axis>
   </animation>
 
