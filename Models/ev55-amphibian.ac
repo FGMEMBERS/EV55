@@ -18476,6 +18476,7 @@ refs 3
 kids 0
 OBJECT poly
 name "Cylinder"
+texture "floats.png"
 loc -5.3748446 -2.0551388 0.0000000
 numvert 256
 0.0000001 -0.3623805 1.5716517
@@ -53279,6 +53280,7 @@ refs 3
 kids 0
 OBJECT poly
 name "floats"
+texture "floats.png"
 loc -3.5960934 -2.6816678 0.0000000
 numvert 1112
 -0.0000001 0.4980866 2.1153858

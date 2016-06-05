@@ -12,7 +12,7 @@
     <fuel-fraction>1.0</fuel-fraction>
   
     <startup>
-      <splash-texture>Aircraft/EV55/splash.png</splash-texture>
+      <splash-texture>Aircraft/EV55/splash-amphibian.png</splash-texture>
     </startup>
    <sound>
       <path>Aircraft/EV55/Sounds/ev55-sound.xml</path>
