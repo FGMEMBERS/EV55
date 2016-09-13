@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="ev55-amphibian-base.xml">
+
+  <sim>
+
+    <description>Evektor EV55 Amphibian (YASim)</description>
+    <author>D-ECHO (3D/FDM)</author>
+    <flight-model>yasim</flight-model>
+    <aero>ev55-amphibian-yasim</aero>
+
+  </sim>
+    
+</PropertyList>

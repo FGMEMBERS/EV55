@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <description>Evektor EV55 (yasim)</description>
+    <author>D-ECHO (3D/FDM)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+   
+    <fuel-fraction>1.0</fuel-fraction>
+  
+    <startup>
+      <splash-texture>Aircraft/EV55/splash-amphibian.png</splash-texture>
+    </startup>
+   <sound>
+      <path>Aircraft/EV55/Sounds/ev55-sound.xml</path>
+    </sound>
+
+    <model>
+      <path>Aircraft/EV55/Models/ev55-amphibian.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model> 
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                      <!-- 0 immat -->
+        <int type="int" n="1">  0 </int>                                      <!-- 1 immat -->
+        <int type="int" n="2">  0 </int>                                      <!-- 2 immat -->
+        <int type="int" n="3">  0 </int>                                      <!-- 3 immat -->
+        <int type="int" n="4">  0 </int>                                      <!-- 4 immat -->
+        <int type="int" n="5">  0 </int>                                      <!-- 5 immat -->
+        <int type="bool" n="6"> 1 </int>                                      <!-- 6 smoke/bomb/torpedo -->
+        <int type="int" n="7">  0 </int>                                      <!-- 7 color -->
+        <int n="8" alias="/systems/electrical/outputs/nav-lights">  0 </int>  <!-- 8 nav-lights -->
+        <int n="9" alias="/sim/model/lights/beacon/state">  false </int>      <!-- 9 strobe-lights -->
+        <int n="10" alias="/controls/electric/key-pos">  0 </int>             <!-- 10 key position -->
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>  
+        <float n="2" alias="/position/gear-agl-m">  0 </float>                <!-- 11 altitude for MP shadow -->
+        <float n="3" alias="/position/altitude-ft">  0 </float>                <!-- 11 altitude for MP shadow -->
+        <float n="6" alias="/engines/engine[0]/rpm" />
+        <float n="7" alias="/engines/engine[1]/rpm" />
+        <float n="8" alias="/engines/engine[0]/cranking" />
+        <float n="9" alias="/engines/engine[1]/cranking" />
+        <string n="0" type="string" />
+        <string n="9" type="string" />                                        <!-- string[9] reserved for bombable mode -->
+      </generic>
+    </multiplay>
+
+    <help>
+      <title>Evektor EV-55</title>
+<!--      <key>
+        <name>d</name>
+        <desc>Open/Close crew door</desc>
+      </key>
+      <key>
+        <name>D</name>
+        <desc>Open/Close passenger door</desc>
+      </key>
+      <key>
+        <name>E</name>
+        <desc>Open/Close cargo door</desc>
+      </key>
+      <key>
+        <name>e</name>
+        <desc>Open/Close bagages door</desc>
+      </key>
+      <key>
+        <name>Ctrl-e</name>
+        <desc>Open/Close bay door</desc>
+      </key>-->
+    </help>
+
+    <menubar include="Dialogs/ev55-menu.xml"/>
+
+  </sim>
+
+  <input>
+    <keyboard include="Nasal/ev55-keyboard.xml"/>
+  </input>
+
+  <controls>
+    <assemblies>
+        <caution0-button type="double">0</caution0-button>
+        <flap-override-button type="double">0</flap-override-button>
+        <flap-override-guard type="double">1</flap-override-guard>
+        <inhibit-button type="double">0</inhibit-button>
+        <inhibit-guard type="double">1</inhibit-guard>
+        <steep-approach-button type="double">0</steep-approach-button>
+        <steep-approach-guard type="double">1</steep-approach-guard>
+        <terrain-inhibit-button type="double">0</terrain-inhibit-button>
+        <terrain-inhibit-guard type="double">1</terrain-inhibit-guard>
+        <warning0-button type="double">0</warning0-button>
+    </assemblies>
+    <electric>
+        <battery-switch type = "bool">0</battery-switch>
+        <avionics-switch type = "bool">0</avionics-switch>
+        <external-power type = "bool">0</external-power>
+        <RH-AC-bus type = "bool">0</RH-AC-bus>
+        <LH-AC-bus type = "bool">0</LH-AC-bus>
+        <engine n="0">
+            <generator>false</generator>
+        </engine>
+        <engine n="1">
+            <generator>false</generator>
+        </engine>
+        <wipers>
+            <arc-sec type="double" n="0">0</arc-sec>
+            <arc-sec type="double" n="1">1</arc-sec>
+            <arc-sec type="double" n="2">0.6</arc-sec>
+            <delay-sec type="double" n="0">0</delay-sec>
+            <delay-sec type="double" n="1">0</delay-sec>
+            <delay-sec type="double" n="2">0</delay-sec>
+            <switch type="int">0</switch>
+            <position-norm type="double">0</position-norm>
+        </wipers>
+        <efis>
+            <bank n="0" type="bool">0</bank>
+            <bank n="1" type="bool">0</bank>
+        </efis>
+    </electric>
+
+    <lighting>
+        <instruments-norm>0.8</instruments-norm>
+        <eng-norm type="double">0.8</eng-norm>
+        <landing-lights n="0" type="bool">0</landing-lights>
+        <landing-lights n="1" type="bool">0</landing-lights>
+        <recog-lights type="bool">0</recog-lights>
+        <ice-lights type="bool">0</ice-lights>
+        <taxi-lights type="bool">0</taxi-lights>
+        <master-panel type="bool">0</master-panel>
+    </lighting>
+
+    <gear>
+        <brake-parking>1</brake-parking>
+    </gear>
+
+    <engines>
+        <engine n="0">
+            <condition>0</condition>
+            <condition-input type="double">0</condition-input>
+            <propeller-pitch>0</propeller-pitch>
+            <mixture>0</mixture>
+        </engine>
+        <engine n="1">
+            <condition>0</condition>
+            <condition-input type="double">0</condition-input>
+            <propeller-pitch>0</propeller-pitch>
+            <mixture>0</mixture>
+        </engine>
+    </engines>
+
+    <fuel>
+    <gauge-switch type="string">main</gauge-switch>
+    <Laux-switch type="string">auto</Laux-switch>
+    <Raux-switch type="string">auto</Raux-switch>
+    <transfer type="string">off</transfer>
+    </fuel>
+
+  </controls>
+<consumables>
+    <fuel>
+        <gauge n="0" type="double">0</gauge>
+        <gauge n="1" type="double">0</gauge>
+        <tank n="0">
+            <name>L Main</name>
+        </tank>
+        <tank n="1">
+            <name>R Main</name>
+        </tank>
+        <tank n="2">
+            <name>L Aux</name>
+            <level-gal_us type="double">0</level-gal_us>
+        </tank>
+        <tank n="3">
+            <name>R Aux</name>
+            <level-gal_us type="double">0</level-gal_us>
+        </tank>
+    </fuel>
+</consumables>
+
+    <instrumentation>
+    <mk-viii>                          <!-- http://wiki.flightgear.org/index.php/GPWS -->
+      <serviceable>true</serviceable>  <!-- EGPWS_ENABLE -->
+      <configuration-module>
+       <category-1>   1 </category-1>  <!-- AIRCRAFT_MODE_TYPE_SELECT -->
+       <category-8>   3 </category-8>  <!-- RADIO_ALTITUDE_INPUT_SELECT -->
+      </configuration-module>
+      <inputs>                         <!-- Module I/O -->
+       <arinc429>
+        <decision-height-ncd> false </decision-height-ncd>
+        <decision-height>150</decision-height>
+       </arinc429>
+      </inputs>
+          <speaker>
+                <volume>1</volume>
+                <max-dist>2</max-dist>
+                <reference-dist>0.5</reference-dist>
+                <position>
+                    <x>-4.5</x>
+                    <y>0</y>
+                    <z>0.5</z>
+                </position>
+          </speaker>
+    </mk-viii>
+    <airspeed-indicator>
+        <index n="0" type="double">117</index>
+        <index n="1" type="double">130</index>
+        <ias-limit>248.0</ias-limit>
+        <mach-limit>0.48</mach-limit>
+        <alt-threshold>13200.0</alt-threshold>
+    </airspeed-indicator>
+    <inst-vertical-speed-indicator>
+        <serviceable type="bool">true</serviceable>
+    </inst-vertical-speed-indicator>
+    <adf>
+        <func-knob type="int">2</func-knob>
+        <volume-norm type="double">0.2</volume-norm>
+        <mode type="string">adf</mode>
+        <ident-audible type="bool">0</ident-audible>
+    </adf>
+    <comm n="0">
+        <func-knob type="int">1</func-knob>
+        <volume type="double">0.2</volume>
+    </comm>
+    <comm n="1">
+        <func-knob type="int">1</func-knob>
+        <volume type="double">0.2</volume>
+    </comm>
+    <nav n="0">
+        <func-knob type="int">1</func-knob>
+        <volume type="double">0.2</volume>
+    </nav>
+    <nav n="1">
+        <func-knob type="int">1</func-knob>
+        <volume type="double">0.2</volume>
+    </nav>
+    <rmi>
+        <unit n="0">
+            <btn n="0" type="bool">0</btn>
+            <btn n="1" type="bool">0</btn>
+        </unit>
+        <unit n="1">
+            <btn n="0" type="bool">0</btn>
+            <btn n="1" type="bool">0</btn>
+        </unit>
+    </rmi>
+    <alt-alerter>
+        <fl type="int">100</fl>
+        <alert type="bool">0</alert>
+        <enabled type="bool">1</enabled>
+    </alt-alerter>
+    <efis>
+        <unit n="0">
+            <nav-data type="string">GSP</nav-data>
+        </unit>
+        <unit n="1">
+            <nav-data type="string">GSP</nav-data>
+        </unit>
+    </efis>
+    <dynon-efis><ready type="float">0</ready></dynon-efis>
+    </instrumentation>
+
+    <engines>
+        <engine n="0">
+            <running>0</running>
+            <rpm>0</rpm>
+            <n1 type="double">0</n1>
+            <fuel-flow_pph type="float">0</fuel-flow_pph>
+        </engine>
+        <engine n="1">
+            <running>0</running>
+            <rpm>0</rpm>
+            <n1 type="double">0</n1>
+            <fuel-flow_pph type="float">0</fuel-flow_pph>
+        </engine>
+    </engines>
+  
+  <nasal>
+    <doors>
+      <file>Nasal/doors.nas</file>
+    </doors>
+    <systems>
+      <file>Models/Interior/Panel/Instruments/Dynon_D180/d180.nas</file>
+      <file>Nasal/liveries.nas</file>
+      <file>Nasal/light.nas</file>
+      <file>Nasal/systems.nas</file>
+      <file>Nasal/Electrical.nas</file>
+    </systems>
+  </nasal>
+
+</PropertyList>

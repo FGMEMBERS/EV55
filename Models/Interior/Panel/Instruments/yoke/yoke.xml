@@ -1,0 +1,33 @@
+<?xml version="1.0" ?> 
+  <PropertyList> 
+    <path>yoke.ac</path> 
+ <animation>
+  <type>translate</type>
+  <object-name>yoke</object-name>
+  <property>controls/flight/elevator</property>
+  <factor>-0.04</factor>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>yoke</object-name>
+  <property>controls/flight/aileron</property>
+  <factor>-30.0</factor>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+ </animation>
+
+</PropertyList>
