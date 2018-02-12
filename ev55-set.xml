@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- <PropertyList include="do228-jsbsim-cnf.xml"> -->
-<PropertyList include="ev55-yasim-cnf.xml">
+<PropertyList include="ev55-base.xml">
 
   <sim>
     
-    <description>Evektor EV55 (YASim)</description>
+    <description>Evektor EV55 Outback(YASim)</description>
     <author>D-ECHO (3D/FDM)</author>
     <status>beta</status>
+    <flight-model>yasim</flight-model>
+    <aero>ev55-yasim</aero>
+    
     <rating>
         <FDM type="int">     2 </FDM> <!--No PoH available, almost no test data available-->
       <systems type="int"> 1 </systems>

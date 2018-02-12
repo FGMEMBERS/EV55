@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- Dornier Do 228  : 2013 BARANGER Emmanuel 
-	Evektor EV-55 Outback : 2016 D-ECHO
+<!-- Evektor EV-55 Outback : 2016 D-ECHO
 
      sources         : https://en.wikipedia.org/wiki/Evektor_EV-55_Outback and http://www.evektoraircraft.com/en/ev-55-outback
 
@@ -15,7 +14,7 @@
      Service ceiling : 8535 m   ( 28000 ft)
 -->
 
-<airplane mass="5789" version="YASIM_VERSION_CURRENT">
+<airplane mass="5789">
 
   <approach speed="64" aoa="6" fuel="0.3">
   <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
@@ -115,16 +114,16 @@
                              flat-rating="700" 
                              min-n2="70" 
                              max-n2="100"> 
-        <control-input axis="/controls/engines/engine[0]/throttle"
-        control="THROTTLE"/>
-        <control-input axis="/controls/engines/engine[0]/condition"
-        control="CONDLEVER"/>
-        <control-input axis="/controls/engines/engine[0]/starter"
-        control="STARTER"/>
-        <control-input axis="/controls/engines/engine[0]/propeller-pitch"
-        control="ADVANCE"/>
-        <control-input axis="/controls/engines/engine[0]/propeller-feather"
-        control="PROPFEATHER"/>
+			<control-input axis="/controls/engines/engine[0]/throttle"
+			control="THROTTLE"/>
+			<control-input axis="/controls/engines/engine[0]/condition"
+			control="CONDLEVER"/>
+			<control-input axis="/controls/engines/engine[0]/starter"
+			control="STARTER"/>
+			<control-input axis="/controls/engines/engine[0]/propeller-pitch"
+			control="ADVANCE"/>
+			<control-input axis="/controls/engines/engine[0]/propeller-feather"
+			control="PROPFEATHER"/>
              </turbine-engine>
   </propeller>
 
@@ -146,21 +145,21 @@
                              flat-rating="700" 
                              min-n2="70" 
                              max-n2="100"> 
-        <control-input axis="/controls/engines/engine[1]/throttle"
-        control="THROTTLE"/>
-        <control-input axis="/controls/engines/engine[1]/condition"
-        control="CONDLEVER"/>
-        <control-input axis="/controls/engines/engine[1]/starter"
-        control="STARTER"/>
-        <control-input axis="/controls/engines/engine[1]/propeller-pitch"
-        control="ADVANCE"/>
-        <control-input axis="/controls/engines/engine[1]/propeller-feather"
-        control="PROPFEATHER"/>
+			<control-input axis="/controls/engines/engine[1]/throttle"
+			control="THROTTLE"/>
+			<control-input axis="/controls/engines/engine[1]/condition"
+			control="CONDLEVER"/>
+			<control-input axis="/controls/engines/engine[1]/starter"
+			control="STARTER"/>
+			<control-input axis="/controls/engines/engine[1]/propeller-pitch"
+			control="ADVANCE"/>
+			<control-input axis="/controls/engines/engine[1]/propeller-feather"
+			control="PROPFEATHER"/>
              </turbine-engine>
   </propeller>
 
-  <!-- Roue du nez -->
-  <gear x="5.04981" y="0" z="-2.53203" 
+  <!-- Front Gear -->
+  <gear x="5.30703" y="0" z="-2.67572" 
         compression="0.1" 
         retract-time="7" 
         on-water="0" 
@@ -176,8 +175,8 @@
         <control-speed control="EXTEND" transition-time="5"/>
   </gear>
 
-  <!-- Roue gauche -->
-  <gear x="1.30448" y="1.30612" z="-2.59839" 
+  <!-- Left Gear -->
+  <gear x="1.104" y="1.49956" z="-2.76287" 
         compression="0.2" 
         retract-time="7"
         on-water="0" 
@@ -193,8 +192,8 @@
         <control-speed control="EXTEND" transition-time="7"/>
   </gear>
 
-  <!-- Roue droite -->
-  <gear x="1.30448" y="-1.30612" z="-2.59839" 
+  <!-- Right Gear -->
+  <gear x="1.104" y="-1.49956" z="-2.76287" 
         compression="0.2" 
         retract-time="7" 
         on-water="0" 
@@ -209,11 +208,14 @@
 
         <control-speed control="EXTEND" transition-time="6"/>
   </gear>
+  
+  <!--adjustable weights-->
  <weight x="4.25947" y="0" z="-1.09557" mass-prop="/sim/weight[0]/weight-lb"/> <!-- Crew -->
 <weight x="2.76032" y="0" z="-1.04504" mass-prop="/sim/weight[1]/weight-lb"/> <!-- Passengers 1-2 -->
 <weight x="0.59065" y="0" z="-0.90943" mass-prop="/sim/weight[2]/weight-lb"/> <!-- Passengers 3-4(5)-->
 <weight x="5.79546" y="0" z="-1.33588" mass-prop="/sim/weight[3]/weight-lb"/> <!-- Baggage-->
 
+<!--Fuel Tanks-->
   <tank x="1.3" y=" 2.5" z="0.57" capacity="1472"/>
   <tank x="1.3" y="-2.5" z="0.57" capacity="1472"/>
 

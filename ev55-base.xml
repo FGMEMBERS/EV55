@@ -3,13 +3,8 @@
 <PropertyList>
 
   <sim include="Nasal/views.xml">
-
-    <description>Evektor EV55 (yasim)</description>
-    <author>D-ECHO (3D/FDM)</author>
-    <aircraft-version>0.1</aircraft-version>
-    <status>Alpha</status>
    
-    <fuel-fraction>1.0</fuel-fraction>
+    <fuel-fraction>0.7</fuel-fraction>
   
     <startup>
       <splash-texture>Aircraft/EV55/splash.png</splash-texture>
@@ -17,12 +12,43 @@
    <sound>
       <path>Aircraft/EV55/Sounds/ev55-sound.xml</path>
     </sound>
+    
+    <!--Disable the generic electrical system-->
+    <systems>
+	    <electrical>
+		    <path></path>
+	    </electrical>
+    </systems>
 
     <model>
       <path>Aircraft/EV55/Models/ev55.xml</path>
       <livery>
         <file type="string">default</file>
       </livery>
+            <rendering>
+                <rain-enabled type="int">2</rain-enabled>
+                <reflection-enabled type="int">1</reflection-enabled>
+                <reflection-type type="int">1</reflection-type>
+                <reflection-dynamic type="int">1</reflection-dynamic>
+                <reflection-correction type="float">-0.6</reflection-correction>
+                <reflection-fresnel type="float">0.0</reflection-fresnel>
+                <reflection-fresnel-factor type="float">0.7</reflection-fresnel-factor>
+                <reflection-rainbow type="float">0.0</reflection-rainbow>
+                <reflection-noise type="float">0.00</reflection-noise>
+                <ambient-correction type="float">0.15</ambient-correction>
+		    <exhaust>
+				<rain-enabled type="int">2</rain-enabled>
+				<reflection-enabled type="int">1</reflection-enabled>
+				<reflection-type type="int">1</reflection-type>
+				<reflection-dynamic type="int">1</reflection-dynamic>
+				<reflection-correction type="float">0.6</reflection-correction>
+				<reflection-fresnel type="float">0.0</reflection-fresnel>
+				<reflection-fresnel-factor type="float">0.7</reflection-fresnel-factor>
+				<reflection-rainbow type="float">0.0</reflection-rainbow>
+				<reflection-noise type="float">0.00</reflection-noise>
+				<ambient-correction type="float">0.15</ambient-correction>
+		    </exhaust>
+            </rendering>
     </model> 
 
     <multiplay>
@@ -98,6 +124,8 @@
         <warning0-button type="double">0</warning0-button>
     </assemblies>
     <electric>
+	    <batteryL type="bool">0</batteryL>
+	    <batteryR type="bool">0</batteryR>
         <battery-switch type = "bool">0</battery-switch>
         <avionics-switch type = "bool">0</avionics-switch>
         <external-power type = "bool">0</external-power>
@@ -126,6 +154,7 @@
     </electric>
 
     <lighting>
+	    <beacon type="bool">0</beacon>
         <instruments-norm>0.8</instruments-norm>
         <eng-norm type="double">0.8</eng-norm>
         <landing-lights n="0" type="bool">0</landing-lights>
@@ -141,16 +170,17 @@
     </gear>
 
     <engines>
+	    <internal-engine-starter type="int">0</internal-engine-starter>
         <engine n="0">
             <condition>0</condition>
             <condition-input type="double">0</condition-input>
-            <propeller-pitch>0</propeller-pitch>
+            <propeller-pitch>1</propeller-pitch>
             <mixture>0</mixture>
         </engine>
         <engine n="1">
             <condition>0</condition>
             <condition-input type="double">0</condition-input>
-            <propeller-pitch>0</propeller-pitch>
+            <propeller-pitch>1</propeller-pitch>
             <mixture>0</mixture>
         </engine>
     </engines>
@@ -286,9 +316,8 @@
       <file>Nasal/doors.nas</file>
     </doors>
     <systems>
-      <file>Models/Interior/Panel/Instruments/Dynon_D180/d180.nas</file>
-      <file>Nasal/liveries.nas</file>
-      <file>Nasal/light.nas</file>
+      <file>Models/Interior/Panel/Instruments/Dynon_D180/d180.nas</file><!--
+      <file>Nasal/light.nas</file>-->
       <file>Nasal/systems.nas</file>
       <file>Nasal/Electrical.nas</file>
     </systems>
