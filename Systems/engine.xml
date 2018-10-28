@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    This includes various system parts of the electrical system, to have less nasal code and thus better framerate
+-->
+
+<PropertyList>
+
+</PropertyList>
