@@ -1,48 +1,41 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-
-<!-- <PropertyList include="do228-jsbsim-cnf.xml"> -->
-<PropertyList include="ev55-yasim-cnf.xml">
-
-  <sim>
-    
-    <description>Evektor EV55 (YASim)</description>
-    <author>D-ECHO (3D/FDM)</author>
-    <status>beta</status>
-    <rating>
-        <FDM type="int">     2 </FDM> <!--No PoH available, almost no test data available-->
-      <systems type="int"> 1 </systems>
-      <cockpit type="int"> 3 </cockpit>
-      <model type="int">   3 </model>
-    </rating>
-   <weight n="0">
-        <name>Crew</name>
-        <weight-lb>360</weight-lb>
-        <max-lb>500</max-lb>
-        <min-lb>100</min-lb>
-    </weight>
-
-    <weight n="1">
-        <name>Passengers, rows 1-2</name>
-        <weight-lb>1320</weight-lb>
-        <max-lb>2000</max-lb>
-        <min-lb>0</min-lb>
-    </weight>
-
-    <weight n="2">
-        <name>Passengers, rows 3-4(5)</name>
-        <weight-lb>1600</weight-lb>
-        <max-lb>2500</max-lb>
-        <min-lb>0</min-lb>
-    </weight>
-
-    <weight n="3">
-        <name>Baggage</name>
-        <weight-lb>50</weight-lb>
-        <max-lb>100</max-lb>
-        <min-lb>0</min-lb>
-    </weight>
-
-  </sim>
-
+<PropertyList include="ev55-base.xml">
+	<sim>
+		<description>Evektor EV55 Outback(YASim)</description>
+		<author>D-ECHO (3D/FDM)</author>
+		<status>beta</status>
+		<flight-model>yasim</flight-model>
+		<aero>ev55-yasim</aero>
+		<rating>
+			<FDM type="int">     2 </FDM>
+			<!--No PoH available, almost no test data available-->
+			<systems type="int"> 1 </systems>
+			<cockpit type="int"> 3 </cockpit>
+			<model type="int">   3 </model>
+		</rating>
+		<weight n="0">
+			<name>Crew</name>
+			<weight-lb>360</weight-lb>
+			<max-lb>500</max-lb>
+			<min-lb>100</min-lb>
+		</weight>
+		<weight n="1">
+			<name>Passengers, rows 1-2</name>
+			<weight-lb>1320</weight-lb>
+			<max-lb>2000</max-lb>
+			<min-lb>0</min-lb>
+		</weight>
+		<weight n="2">
+			<name>Passengers, rows 3-4(5)</name>
+			<weight-lb>1600</weight-lb>
+			<max-lb>2500</max-lb>
+			<min-lb>0</min-lb>
+		</weight>
+		<weight n="3">
+			<name>Baggage</name>
+			<weight-lb>50</weight-lb>
+			<max-lb>100</max-lb>
+			<min-lb>0</min-lb>
+		</weight>
+	</sim>
 </PropertyList>
-

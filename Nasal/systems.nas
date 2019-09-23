@@ -2,7 +2,7 @@
 #### Syd Adams
 
 
-aircraft.livery.init("Aircraft/EchoAirPropPower/Models/Liveries");
+aircraft.livery.init("Aircraft/EV55/Models/Liveries");
 var FDM ="";
 var tanks=[];
 var N1=[0.0,0.0];
@@ -203,18 +203,6 @@ var Alarm = {
                 test2=1;
                 master=1;
             }
-            if(getprop("systems/electrical/LH-ac-bus")<100){
-                ac1=1;
-                master=1;
-            }
-            if(getprop("systems/electrical/RH-ac-bus")<100){
-                ac2=1;
-                master=1;
-            }
-            if(getprop("controls/cabin-door/position-norm")>0){
-                cbndoor=1;
-                master=1;
-            }
         }
             me.MWarning.setValue(master);
             me.warning_index[0].setValue(test1);
@@ -356,12 +344,13 @@ setprop("instrumentation/zkv1000/pfd/status",1);
 setprop("controls/electric/battery-switch",1);
 setprop("controls/electric/inverter-switch",1);
 setprop("controls/lighting/instrument-lights",1);
-setprop("controls/lighting/landing-lights",1);
-setprop("controls/lighting/landing-lights[1]",1);
+setprop("controls/lighting/landing-light",1);
+setprop("controls/lighting/landing-light[1]",1);
 setprop("controls/lighting/taxi-lights",1);
-setprop("controls/lighting/beacon/switch",1);
-setprop("controls/lighting/strobe/switch",1);
+setprop("controls/lighting/beacon",1);
+setprop("controls/lighting/strobe",1);
 setprop("controls/lighting/logo-lights",1);
+setprop("controls/lighting/nav-lights",1);
 setprop("controls/engines/engine[0]/condition",1);
 setprop("controls/engines/engine[1]/condition",1);
 setprop("controls/engines/engine[0]/condition-input",1);
@@ -399,12 +388,13 @@ setprop("controls/electric/avionics-switch",0);
 setprop("controls/electric/battery-switch",0);
 setprop("controls/electric/inverter-switch",0);
 setprop("controls/lighting/instrument-lights",0);
-setprop("controls/lighting/landing-lights",0);
-setprop("controls/lighting/landing-lights[1]",0);
+setprop("controls/lighting/landing-light",0);
+setprop("controls/lighting/landing-light[1]",0);
 setprop("controls/lighting/taxi-lights",0);
-setprop("controls/lighting/beacon/switch",0);
-setprop("controls/lighting/strobe/switch",0);
+setprop("controls/lighting/beacon",0);
+setprop("controls/lighting/strobe",0);
 setprop("controls/lighting/logo-lights",0);
+setprop("controls/lighting/nav-lights",0);
 setprop("controls/engines/engine[0]/cutoff",1);
 setprop("controls/engines/engine[1]/cutoff",1);
 setprop("controls/engines/engine[0]/condition",0);
@@ -515,6 +505,29 @@ var update_systems = func {
     update_engine(Engstep);
     Engstep=1-Engstep;
     check_gear();
+    
+    var ignition_switch0=getprop("/controls/engines/engine[0]/ignition-switch");
+    var starter0=getprop("/controls/engines/engine[0]/starter");
+    #Ignition Switch mapping (int): 0=OFF 1=AUTO 2=ON
+    if(ignition_switch0==-1){
+	setprop("/controls/engines/engine[0]/ignition", 1);
+    }else if(ignition_switch0==1 and starter0==1){
+	setprop("/controls/engines/engine[0]/ignition", 1);
+    }else{
+	setprop("/controls/engines/engine[0]/ignition", 0);
+    }
+    
+    var ignition_switch1=getprop("/controls/engines/engine[0]/ignition-switch");
+    var starter1=getprop("/controls/engines/engine[0]/starter");
+    #Ignition Switch mapping (int): 0=OFF 1=AUTO 2=ON
+    if(ignition_switch1==-1){
+	setprop("/controls/engines/engine[1]/ignition", 1);
+    }else if(ignition_switch1==1 and starter1==1){
+	setprop("/controls/engines/engine[1]/ignition", 1);
+    }else{
+	setprop("/controls/engines/engine[1]/ignition", 0);
+    }
+    
 #from the CitationX
     var grspd =getprop("velocities/groundspeed-kt");
     var wspd = (45-grspd) * 0.022222;

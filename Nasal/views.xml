@@ -70,8 +70,8 @@
     <internal archive="y">true</internal>
     <config>
       <x-offset-m archive="y"> -0.36073 </x-offset-m> <!-- Right -->
-      <y-offset-m archive="y"> -0.5955 </y-offset-m> <!-- Up    -->
-      <z-offset-m archive="y"> -4.1901 </z-offset-m> <!-- Back  -->
+      <y-offset-m archive="y"> -0.72182 </y-offset-m> <!-- Up    -->
+      <z-offset-m archive="y"> -3.92712 </z-offset-m> <!-- Back  -->
       <pitch-offset-deg> -10 </pitch-offset-deg>
     </config>
   </view>

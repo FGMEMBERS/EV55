@@ -45,103 +45,307 @@
   </nasal>
   <path>ev55.ac</path>
      <effect>
-    <inherits-from>Effects/reflect</inherits-from>
-    <object-name>body</object-name>
-    <object-name>doorFL</object-name>
-    <object-name>doorFR</object-name>
-    <object-name>doorR1</object-name>
-    <object-name>doorR1D</object-name>
-    <object-name>doorR2</object-name>
+    <inherits-from>Effects/fuselage-reflect</inherits-from>
+    <object-name>fuselage</object-name>
+    <object-name>antennas</object-name>
+    <object-name>gearfairing</object-name>
+    <object-name>doorL</object-name>
+    <object-name>doorR</object-name>
+    <object-name>doorRLup</object-name>
+    <object-name>doorRLdown</object-name>
+    <object-name>doorRL2</object-name>
     <object-name>vstab</object-name>
+    <object-name>rudder</object-name>
+    <object-name>rudder.fin</object-name>
+    <object-name>ruddertrimtab</object-name>
     <object-name>hstab</object-name>   
-    <object-name>wing.001</object-name>
+    <object-name>elevator</object-name>  
+    <object-name>elevator.fin</object-name> 
+    <object-name>wing</object-name>
+    <object-name>engineL</object-name>
+    <object-name>engineR</object-name>
+    <object-name>spinnerL</object-name>
+    <object-name>spinnerR</object-name>
+    <object-name>propL</object-name>
+    <object-name>propR</object-name>
+    <object-name>aileronL</object-name>
+    <object-name>aileronL.fin</object-name>
+    <object-name>aileronR</object-name>
+    <object-name>aileronR.fin</object-name>
+  </effect>
+     <effect>
+    <inherits-from>Effects/exhaust-reflect</inherits-from>
+    <object-name>exhaustL</object-name>
+    <object-name>exhaustR</object-name>
   </effect>
     <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>windowF</object-name>
     <object-name>windowsR</object-name>
   </effect>
+    <effect>
+    <inherits-from>Effects/interior/interior-glass-front</inherits-from>
+    <object-name>windowFint</object-name>
+  </effect>
+  
+	<animation>
+		<type>material</type>
+		<object-name>fuselage</object-name>
+		<object-name>antennas</object-name>
+		<object-name>gearfairing</object-name>
+		<object-name>doorL</object-name>
+		<object-name>doorR</object-name>
+		<object-name>doorRLup</object-name>
+		<object-name>doorRLdown</object-name>
+		<object-name>doorRL2</object-name>
+		<object-name>vstab</object-name>
+		<object-name>rudder</object-name>
+		<object-name>rudder.fin</object-name>
+		<object-name>ruddertrimtab</object-name>
+		<object-name>hstab</object-name>   
+		<object-name>elevator</object-name>  
+		<object-name>elevator.fin</object-name> 
+		<object-name>wing</object-name>
+		<object-name>engineL</object-name>
+		<object-name>engineR</object-name>
+		<object-name>spinnerL</object-name>
+		<object-name>spinnerR</object-name>
+		<object-name>propL</object-name>
+		<object-name>propR</object-name>
+		<object-name>aileronL</object-name>
+		<object-name>aileronL.fin</object-name>
+		<object-name>aileronR</object-name>
+		<object-name>aileronR.fin</object-name>
+		<property-base>sim/model/livery</property-base>
+		<texture-prop>texture</texture-prop>
+		<texture>ev55.png</texture>
+	</animation>
+	
   <model>
       <path>Interior/interior.xml</path>
   </model>
   <!--LIGHTS-->
+  <!--Landing lights--><!--
   <model>
       <path>light/light-cone-taxi.xml</path>
       <offsets>
-            <x-m>-2.7483</x-m>
-            <y-m>1.0636</y-m>
-            <z-m>-1.8053</z-m>
+            <x-m>-2.88</x-m>
+            <y-m>1.06604</y-m>
+            <z-m>-2</z-m>
             <heading-deg>-5</heading-deg>
             </offsets>
   </model>
   <model>
       <path>light/light-cone-taxi.xml</path>
       <offsets>
-            <x-m>-2.7483</x-m>
-            <y-m>-1.0636</y-m>
-            <z-m>-1.8053</z-m>
+            <x-m>-2.88</x-m>
+            <y-m>-1.06604</y-m>
+            <z-m>-2</z-m>
+            <heading-deg>5</heading-deg>
+            </offsets>
+  </model>-->
+  <model>
+      <path>light/light-cone.xml</path>
+    <name>landinglightL</name>
+      <offsets>
+            <x-m>-2.88</x-m>
+            <y-m>-1.06604</y-m>
+            <z-m>-2</z-m>
             <heading-deg>5</heading-deg>
             </offsets>
   </model>
   <model>
       <path>light/light-cone.xml</path>
+    <name>landinglightR</name>
       <offsets>
-            <x-m>-2.7483</x-m>
-            <y-m>1.0636</y-m>
-            <z-m>-1.8053</z-m>
+            <x-m>-2.88</x-m>
+            <y-m>1.06604</y-m>
+            <z-m>-2</z-m>
             <heading-deg>-5</heading-deg>
-            </offsets>
-  </model>
-  <model>
-      <path>light/light-cone.xml</path>
-      <offsets>
-            <x-m>-2.7483</x-m>
-            <y-m>-1.0636</y-m>
-            <z-m>-1.8053</z-m>
-            <heading-deg>5</heading-deg>
-            </offsets>
-  </model>
-  <model>
-      <path>light/RedLight.xml</path>
-      <offsets>
-            <x-m>-1.1963</x-m>
-            <y-m>-7.9072</y-m>
-            <z-m>0.0719</z-m>
-            </offsets>
-  </model>
-  <model>
-      <path>light/GreenLight.xml</path>
-      <offsets>
-            <x-m>-1.1963</x-m>
-            <y-m>7.9072</y-m>
-            <z-m>0.0719</z-m>
-            </offsets>
-  </model>
-  <model>
-      <path>light/StrobeLight.xml</path>
-      <offsets>
-            <x-m>-1.1963</x-m>
-            <y-m>7.9072</y-m>
-            <z-m>0.0719</z-m>
-            </offsets>
-  </model>
-  <model>
-      <path>light/StrobeLight.xml</path>
-      <offsets>
-            <x-m>-1.1963</x-m>
-            <y-m>-7.9072</y-m>
-            <z-m>0.0719</z-m>
-            </offsets>
-  </model>
-  <model>
-      <path>light/beacon.xml</path>
-      <offsets>
-            <x-m>1.4496</x-m>
-            <y-m>-0.0</y-m>
-            <z-m>-1.9344</z-m>
             </offsets>
   </model>
   
+  
+ <!-- <model>
+    <path>lights/landinglightFLR.xml</path>
+    <name>landinglightLflr</name>
+    <offsets>
+      <x-m>-0.62</x-m>
+      <y-m>-5.48518</y-m>
+      <z-m>3.6302</z-m>
+      <heading-deg>0</heading-deg>
+      <pitch-deg>-10</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>lights/landinglightFLR.xml</path>
+    <name>landinglightRflr</name>
+    <offsets>
+      <x-m>-0.62</x-m>
+      <y-m>5.48518</y-m>
+      <z-m>3.6302</z-m>
+      <heading-deg>0</heading-deg>
+      <pitch-deg>-10</pitch-deg>
+    </offsets>
+  </model>-->
+  <model>
+    <path>light/ALS/landinglightL.xml</path>
+    <name>landinglightL-ALS</name>
+    <offsets>
+            <x-m>-2.88</x-m>
+            <y-m>-1.06604</y-m>
+            <z-m>-2</z-m>
+      <heading-deg>0</heading-deg>
+      <pitch-deg>-10</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>light/ALS/landinglightR.xml</path>
+    <name>landinglightR-ALS</name>
+    <offsets>
+            <x-m>-2.88</x-m>
+            <y-m>1.06604</y-m>
+            <z-m>-2</z-m>
+      <heading-deg>0</heading-deg>
+      <pitch-deg>-10</pitch-deg>
+    </offsets>
+  </model>
+  
+  
+  <!--Red Beacon - below the fuselage-->
+  <model>
+    <path>light/beacon.xml</path>
+    <name>beacon1</name>
+    <offsets>
+            <x-m>0.77307</x-m>
+            <y-m>-0.0</y-m>
+            <z-m>-2.06894</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>light/ALS/beacon.xml</path>
+    <name>beacon1-ALS</name>
+    <offsets>
+            <x-m>0.77307</x-m>
+            <y-m>-0.0</y-m>
+            <z-m>-2.06894</z-m>
+    </offsets>
+  </model>
+  <!--Navigation Lights: Red (left) Green (right) and white (tail)-->
+  <model>
+    <path>light/RedLight.xml</path>
+    <name>navRe</name>
+    <offsets>
+            <x-m>-1.56598</x-m>
+            <y-m>-8.12685</y-m>
+            <z-m>0.04726</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>light/ALS/red-navlight.xml</path>
+    <name>navRe-ALS</name>
+    <offsets>
+            <x-m>-1.56598</x-m>
+            <y-m>-8.12685</y-m>
+            <z-m>0.04726</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>light/GreenLight.xml</path>
+    <name>navGr</name>
+    <offsets>
+            <x-m>-1.56598</x-m>
+            <y-m>8.12685</y-m>
+            <z-m>0.04726</z-m>
+    </offsets>
+  </model>
+  <model>Cessna-208-Caravan
+    <path>light/ALS/green-navlight.xml</path>
+    <name>navGr-ALS</name>
+    <offsets>
+            <x-m>-1.56598</x-m>
+            <y-m>8.12685</y-m>
+            <z-m>0.04726</z-m>
+    </offsets>
+  </model>
+  
+  <!--A/COL lights white-->
+  <!--Wings-->
+  <model>
+    <path>light/StrobeLight.xml</path>
+    <name>strobeRHW</name>
+    <offsets>
+            <x-m>-1.56598</x-m>
+            <y-m>8.12685</y-m>
+            <z-m>0.04726</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>light/ALS/right-strobe.xml</path>
+    <name>strobeRHW-ALS</name>
+    <offsets>
+            <x-m>-1.56598</x-m>
+            <y-m>8.12685</y-m>
+            <z-m>0.04726</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>light/StrobeLight.xml</path>
+    <name>strobeLHW</name>
+    <offsets>
+            <x-m>-1.56598</x-m>
+            <y-m>-8.12685</y-m>
+            <z-m>0.04726</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>light/ALS/left-strobe.xml</path>
+    <name>strobeLHW-ALS</name>
+    <offsets>
+            <x-m>-1.56598</x-m>
+            <y-m>-8.12685</y-m>
+            <z-m>0.04726</z-m>
+    </offsets>
+  </model>
+  
+  <!--Select ALS/billboard lights-->
+  
+  <animation>
+    <type>select</type>
+    <condition>
+      <not>
+        <property>/sim/rendering/shaders/skydome</property>
+      </not>
+    </condition>
+    <object-name>navRe</object-name>
+    <object-name>navGr</object-name>
+    <object-name>navT</object-name>
+    <object-name>strobeLHW</object-name>
+    <object-name>strobeRHW</object-name>
+    <object-name>strobeTT</object-name>
+    <object-name>strobeFB</object-name>
+    <object-name>beacon1</object-name>
+    <object-name>taxilight</object-name>
+    <object-name>landinglightL</object-name>
+    <object-name>landinglightR</object-name>
+  </animation>
+  <animation>
+    <type>select</type>
+    <condition>
+      <property>/sim/rendering/shaders/skydome</property>
+    </condition>
+    <object-name>navRe-ALS</object-name>
+    <object-name>navGr-ALS</object-name>
+    <object-name>navT-ALS</object-name>
+    <object-name>strobeLHW-ALS</object-name>
+    <object-name>strobeRHW-ALS</object-name>
+    <object-name>strobeTT-ALS</object-name>
+    <object-name>strobeFB-ALS</object-name>
+    <object-name>beacon1-ALS</object-name>
+    <object-name>taxilight-ALS</object-name>
+    <object-name>landinglightL-ALS</object-name>
+    <object-name>landinglightR-ALS</object-name>
+  </animation>
   
   <animation>
     <name>Gearleft</name>
@@ -276,9 +480,9 @@
 
   <animation>
     <type>pick</type>
-    <object-name>doorFL</object-name>
-    <object-name>doorFLwindow</object-name>
-    <object-name>doorFLwindowint</object-name>
+    <object-name>doorL</object-name>
+    <object-name>windowL</object-name>
+    <object-name>windowLint</object-name>
     <object-name>doorFLint</object-name>
     <action>
       <button>0</button>
@@ -292,26 +496,28 @@
   
   <animation>
     <type>rotate</type>
-    <object-name>doorFL</object-name>
-    <object-name>doorFLwindow</object-name>
-    <object-name>doorFLwindowint</object-name>
+    <object-name>doorL</object-name>
+    <object-name>windowL</object-name>
+    <object-name>windowLint</object-name>
     <object-name>doorFLint</object-name>
     <property>sim/model/door-positions/crewL/position-norm</property>
     <factor> -120 </factor>
+    <center>
+      <x-m> -4.58856 </x-m>
+      <y-m>  -0.85172 </y-m>
+      <z-m>-1.36156</z-m>
+    </center>
     <axis>
-      <x1-m> -4.71633 </x1-m>
-      <y1-m>-0.81506</y1-m>
-      <z1-m>-1.36391</z1-m>
-      <x2-m>-4.71624 </x2-m>
-      <y2-m> -0.82684 </y2-m>
-      <z2-m> -1.26766</z2-m>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
     </axis>
   </animation>
   <animation>
     <type>pick</type>
-    <object-name>doorFR</object-name>
-    <object-name>doorFRwindow</object-name>
-    <object-name>doorFRwindowint</object-name>
+    <object-name>doorR</object-name>
+    <object-name>windowR</object-name>
+    <object-name>windowRint</object-name>
     <object-name>doorFRint</object-name>
     <action>
       <button>0</button>
@@ -325,25 +531,27 @@
   
   <animation>
     <type>rotate</type>
-    <object-name>doorFR</object-name>
-    <object-name>doorFRwindow</object-name>
-    <object-name>doorFRwindowint</object-name>
+    <object-name>doorR</object-name>
+    <object-name>windowR</object-name>
+    <object-name>windowRint</object-name>
     <object-name>doorFRint</object-name>
     <property>sim/model/door-positions/crewR/position-norm</property>
     <factor> 120 </factor>
+    <center>
+      <x-m> -4.58856 </x-m>
+      <y-m>  0.85172 </y-m>
+      <z-m>-1.36156</z-m>
+    </center>
     <axis>
-      <x1-m> -4.71633 </x1-m>
-      <y1-m>0.81506</y1-m>
-      <z1-m>-1.36391</z1-m>
-      <x2-m>-4.71624 </x2-m>
-      <y2-m> 0.82684 </y2-m>
-      <z2-m> -1.26766</z2-m>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
     </axis>
   </animation>
   <animation>
     <type>pick</type>
-    <object-name>doorR1</object-name>
-    <object-name>doorR1int</object-name>
+    <object-name>doorRLup</object-name>
+    <object-name>windowRLup</object-name>
     <action>
       <button>0</button>
       <repeatable>false</repeatable>  
@@ -356,23 +564,22 @@
   
   <animation>
     <type>rotate</type>
-    <object-name>doorR1</object-name>
-    <object-name>doorR1int</object-name>
+    <object-name>doorRLup</object-name>
+    <object-name>windowRLup</object-name>
     <property>sim/model/door-positions/passenger/position-norm</property>
     <factor> -120 </factor>
     <axis>
-      <x1-m>0.00801 </x1-m>
-      <y1-m>-0.62682</y1-m>
-      <z1-m>-0.38188</z1-m>
-      <x2-m>0.67515 </x2-m>
-      <y2-m> -0.54654 </y2-m>
-      <z2-m> -0.37987</z2-m>
+	    <x1-m>0.16331 </x1-m>
+      <y1-m>-0.69405</y1-m>
+      <z1-m>-0.4547</z1-m>
+      <x2-m>0.79041 </x2-m>
+      <y2-m> -0.65186 </y2-m>
+      <z2-m> -0.45689</z2-m>
     </axis>
   </animation>
   <animation>
     <type>pick</type>
-    <object-name>doorR1D</object-name>
-    <object-name>doorR1Dint</object-name>
+    <object-name>doorRLdown</object-name>
     <action>
       <button>0</button>
       <repeatable>false</repeatable>  
@@ -385,38 +592,22 @@
   
   <animation>
     <type>rotate</type>
-    <object-name>doorR1D</object-name>
-    <object-name>doorR1Dint</object-name>
+    <object-name>doorRLdown</object-name>
     <property>sim/model/door-positions/passengerD/position-norm</property>
     <factor> 120 </factor>
     <axis>
-      <x1-m>0.00587 </x1-m>
-      <y1-m>-0.55995</y1-m>
-      <z1-m>-1.72308</z1-m>
-      <x2-m>0.66803 </x2-m>
-      <y2-m> -0.55012 </y2-m>
-      <z2-m> -1.73262</z2-m>
+	    <x1-m>0.16117 </x1-m>
+      <y1-m>-0.86913</y1-m>
+      <z1-m>-1.86879</z1-m>
+      <x2-m>0.78846 </x2-m>
+      <y2-m> -0.85864</y2-m>
+      <z2-m>-1.86879</z2-m>
     </axis>
   </animation>
-  <animation>
-    <type>rotate</type>
-    <object-name>steps</object-name>
-    <property>sim/model/door-positions/passengerD/position-norm</property>
-<offset-deg>-120</offset-deg>
-    <factor> 120 </factor>
-    <axis>
-      <x1-m>0.00587 </x1-m>
-      <y1-m>-0.55995</y1-m>
-      <z1-m>-1.72308</z1-m>
-      <x2-m>0.66803 </x2-m>
-      <y2-m> -0.55012 </y2-m>
-      <z2-m> -1.73262</z2-m>
-    </axis>
-  </animation>
+  
   <animation>
     <type>pick</type>
-    <object-name>doorR2</object-name>
-    <object-name>doorR2int</object-name>
+    <object-name>doorRL2</object-name>
     <action>
       <button>0</button>
       <repeatable>false</repeatable>  
@@ -429,17 +620,18 @@
   
   <animation>
     <type>rotate</type>
-    <object-name>doorR2</object-name>
-    <object-name>doorR2int</object-name>
+    <object-name>doorRL2</object-name>
     <property>sim/model/door-positions/cargo/position-norm</property>
     <factor> 180 </factor>
 <center>
-            <x-m>1.23683</x-m>
-            <y-m>-0.83314</y-m>
+	<x-m>1.32925</x-m>
+            <y-m>-0.86997</y-m>
         </center>
     <axis><z>1</z>
     </axis>
   </animation>
+  
+  <!--
  <animation>
     <type>pick</type>
     <object-name>doorBFL</object-name>
@@ -497,25 +689,25 @@
       <y2-m> 0.17719 </y2-m>
       <z2-m> -0.85358</z2-m>
     </axis>
-  </animation>
+  </animation>-->
   
     <animation>
         <type>select</type>
         <object-name>propL</object-name>
         <condition>
-            <less-than><property>engines/engine[0]/rpm</property>
-                <value>500</value>
+            <less-than><property>engines/engine[0]/n1</property>
+                <value>30</value>
                 </less-than></condition>
     </animation>
         <animation>
         <type>select</type>
         <object-name>propblurL</object-name>
         <condition>
-            <greater-than><property>engines/engine[0]/rpm</property>
-                <value>400</value>
+            <greater-than><property>engines/engine[0]/n1</property>
+                <value>20</value>
                 </greater-than>
-            <less-than><property>engines/engine[0]/rpm</property>
-                <value>1000</value>
+            <less-than><property>engines/engine[0]/n1</property>
+                <value>50</value>
                 </less-than></condition>
     </animation>
         <animation>
@@ -523,8 +715,8 @@
         <object-name>propdiscL</object-name>
         <condition>
             <greater-than>
-                <property>engines/engine[0]/rpm</property>
-                <value>1000</value>
+                <property>engines/engine[0]/n1</property>
+                <value>50</value>
                 </greater-than>
                     </condition>
     </animation>
@@ -534,12 +726,12 @@
         <object-name>propblurL</object-name>
         <object-name>propdiscL</object-name>
         <object-name>spinnerL</object-name>
-        <property>engines/engine[0]/rpm</property>
-        <condition><greater-than><property>engines/engine[0]/rpm</property><value>5</value></greater-than></condition>
+        <property>engines/engine[0]/n1</property>
+        <condition><greater-than><property>engines/engine[0]/n1</property><value>5</value></greater-than></condition>
         <factor>10</factor>
         <center>
-            <y-m>-2.24041</y-m>
-            <z-m>-0.45737</z-m>
+            <y-m>-2.31698</y-m>
+            <z-m>-0.55951</z-m>
         </center>
         <axis>
             <x>-1.0</x>
@@ -552,19 +744,19 @@
         <type>select</type>
         <object-name>propR</object-name>
         <condition>
-            <less-than><property>engines/engine[1]/rpm</property>
-                <value>500</value>
+            <less-than><property>engines/engine[1]/n1</property>
+                <value>30</value>
                 </less-than></condition>
     </animation>
         <animation>
         <type>select</type>
         <object-name>propblurR</object-name>
         <condition>
-            <greater-than><property>engines/engine[1]/rpm</property>
-                <value>400</value>
+            <greater-than><property>engines/engine[1]/n1</property>
+                <value>20</value>
                 </greater-than>
-            <less-than><property>engines/engine[1]/rpm</property>
-                <value>1000</value>
+            <less-than><property>engines/engine[1]/n1</property>
+                <value>50</value>
                 </less-than></condition>
     </animation>
         <animation>
@@ -572,8 +764,8 @@
         <object-name>propdiscR</object-name>
         <condition>
             <greater-than>
-                <property>engines/engine[1]/rpm</property>
-                <value>1000</value>
+                <property>engines/engine[1]/n1</property>
+                <value>50</value>
                 </greater-than>
                     </condition>
     </animation>
@@ -583,12 +775,12 @@
         <object-name>propblurR</object-name>
         <object-name>propdiscR</object-name>
         <object-name>spinnerR</object-name>
-        <property>engines/engine[1]/rpm</property>
-        <condition><greater-than><property>engines/engine[1]/rpm</property><value>5</value></greater-than></condition>
+        <property>engines/engine[1]/n1</property>
+        <condition><greater-than><property>engines/engine[1]/n1</property><value>5</value></greater-than></condition>
         <factor>10</factor>
         <center>
-            <y-m>2.24041</y-m>
-            <z-m>-0.45737</z-m>
+            <y-m>2.31698</y-m>
+            <z-m>-0.55951</z-m>
         </center>
         <axis>
             <x>-1.0</x>
@@ -612,42 +804,62 @@
  <animation>
     <type>rotate</type>
     <object-name>aileronL</object-name>
+    <object-name>aileronL.fin</object-name>
     <property>surface-positions/left-aileron-pos-norm</property>
     <factor> -15 </factor>
     <axis>
-      <x1-m> -0.97872 </x1-m>
-      <y1-m> -6.12188 </y1-m>
-      <z1-m> 0.03118</z1-m>
-      <x2-m>-0.89092 </x2-m>
-      <y2-m>-7.89105</y2-m>
-      <z2-m> 0.03996</z2-m>
+      <x1-m> -1.01704 </x1-m>
+      <y1-m> -7.7633 </y1-m>
+      <z1-m> 0.0072</z1-m>
+      <x2-m>-0.99477 </x2-m>
+      <y2-m>-5.27351</y2-m>
+      <z2-m> -0.04648</z2-m>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>aileronR</object-name>
+    <object-name>aileronR.fin</object-name>
     <property>surface-positions/right-aileron-pos-norm</property>
     <factor> 15 </factor>
     <axis>
-      <x1-m> -0.97872 </x1-m>
-      <y1-m> 6.12188 </y1-m>
-      <z1-m> 0.03118</z1-m>
-      <x2-m>-0.89092 </x2-m>
-      <y2-m>7.89105</y2-m>
-      <z2-m> 0.03996</z2-m>
+      <x1-m> -1.01704 </x1-m>
+      <y1-m> 7.7633 </y1-m>
+      <z1-m> 0.0072</z1-m>
+      <x2-m>-0.99477 </x2-m>
+      <y2-m>5.27351</y2-m>
+      <z2-m> -0.04648</z2-m>
     </axis>
   </animation>
     <animation>
     <type>rotate</type>
     <object-name>rudder</object-name>
+    <object-name>rudder.fin</object-name>
+    <object-name>ruddertrimtab</object-name>
     <property>surface-positions/rudder-pos-norm</property>
     <factor> -15 </factor>
     <axis>
-      <x1-m> 4.65454 </x1-m>
-      <z1-m>-0.50571</z1-m>
-      <x2-m>  6.63602 </x2-m>
-      <z2-m> 2.23788 </z2-m>
+      <x1-m> 4.7032 </x1-m>
+      <z1-m>-0.50438</z1-m>
+      <x2-m>  6.25207 </x2-m>
+      <z2-m> 1.90987 </z2-m>
     </axis>
   </animation>
+    <animation>
+    <type>rotate</type>
+    <object-name>elevator</object-name>
+    <object-name>elevator.fin</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 15 </factor>
+        <center>
+            <x-m>6.13104</x-m>
+            <z-m>1.78452</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0.0</z>
+        </axis>
+</animation>
 </PropertyList>
